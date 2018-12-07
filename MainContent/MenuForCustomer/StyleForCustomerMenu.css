@@ -1,0 +1,53 @@
+* { margin: 0; padding: 0; }
+body { overflow: hidden; }
+
+
+main {
+
+    width: 100%;
+    height: 1080px;
+
+
+}
+
+#ProfileClient {
+
+    width: 100%;
+    height: 33%;
+    background-color: yellow;
+}
+
+#ArchiveSent {
+
+    width: 50%;
+    height: 100%;
+    background-color: green;
+}
+
+#ArchiveReceived {
+
+    width: 50%;
+    height: 100%;
+    background-color: orangered;
+}
+
+#SendPost {
+
+    width: 70%;
+    height: 100%;
+    background-color: blue;
+}
+
+#OnlineHelp {
+
+    width: 30%;
+    height: 100%;
+    background-color: red;
+
+}
+
+#Archive, #SendANDHelp {
+
+    display: flex;
+    height: 33.3333%;
+}
