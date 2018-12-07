@@ -1,0 +1,701 @@
+* { margin: 0; padding: 0; }
+body { overflow: hidden;  }
+
+header
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 100%;
+    background-color: #FFBE2E;
+    height: 30%;
+    z-index: 100;
+}
+
+#containerLogo
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: auto;
+    height: 100%;
+    width: auto;
+}
+
+#logo
+{
+    height: 70px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#nameCompany
+{
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+}
+
+#profileAbout
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:70px;
+
+}
+
+.aboutPost
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+    height: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    cursor: pointer;
+}
+
+.aboutPost:hover
+{
+    background-color: #D59A1A;
+}
+
+.aboutPost, a
+{
+
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+
+}
+
+.profile
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 15px;
+    padding-left: 15px;
+    height: 100%;
+    cursor: pointer;
+}
+#profileIMG
+{
+    height: 40px;
+}
+
+.profile:hover
+{
+    background-color: #D59A1A;
+}
+
+#profileColor:hover
+{
+    background-color: red;
+}
+
+main
+{
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFBE2E;
+
+}
+
+#mainPoster
+{
+    width: 70%;
+    height: 909px;
+
+}
+
+.topLogReg
+{
+    height: 260px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    padding: 5px;
+    border-left: solid black 1px;
+    border-bottom: solid black 1px;
+    position: absolute;
+    left: 100%;
+    top: 70px;
+    transition: left 1s;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.topLogRegHIDE
+{
+    left: 83.8%;
+}
+
+.topLogReg, p
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+
+input[type='text'], input[type='password']
+{
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    border: solid black 1px;
+}
+
+.sendTo > a
+{
+    font-size: 20px;
+    cursor: pointer;
+    color: #323232;
+}
+
+.sendTo > a:hover
+{
+    color: black;
+    font-weight: bold;
+}
+
+.sendTo > input
+{
+    width: 210px;
+    margin-left: 5px;
+}
+
+#EnterButton
+{
+    margin-top: 25px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    background-color: black;
+    border: solid black 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+#EnterButton:hover
+{
+    background-color: white;
+    color: black;
+}
+
+.socialAcess > img
+{
+    height: 25px;
+    cursor: pointer;
+}
+
+.socialAcess > img:hover
+{
+    opacity: 0.5;
+}
+
+.AcessTo { display: flex; justify-content: space-around; margin-top: 15px; }
+
+.AcessTo > a
+{
+    font-size: 20px;
+    cursor: pointer;
+    color: #323232;
+}
+
+.AcessTo > a:hover
+{
+    font-weight: bold;
+    color: black;
+}
+
+/*Modal Window*/
+
+.modal
+{
+    display: none;
+    justify-content: center;
+    position: fixed;
+    border: solid 1px black;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+
+}
+
+.modal-content
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+    margin: 15px auto;
+    padding-left: 20px;
+    padding-right: 10px;
+    border: 1px solid black;
+    width: 400px;
+    height: 570px;
+}
+
+.close
+{
+    display: flex;
+    position: absolute;
+    margin-top: 5px;
+    margin-left: 5px;
+    align-self: flex-end;
+    counter-reset: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover
+{
+    opacity: 0.5;
+}
+
+.close > img
+{
+    height: 20px;
+}
+
+#regHeader
+{
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 5%;
+    flex-direction: column;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+sup { color: red; }
+
+.FieldsForRegistration
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+tr
+{
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.StyleInputReg
+{
+    border: solid 1px black;
+    font-size: 16px;
+    margin-left: 10px;
+}
+
+#DateOFBirth
+{
+    width: 163px;
+    height: 27px;
+}
+
+.containerFields
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+.RegButton
+{
+    display: none;
+    margin-top: 15px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    color: white;
+    background-color: black;
+    border: solid black 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+    width: 170px;
+}
+
+.RegButton:hover
+{
+    background-color: white;
+    color: black;
+}
+
+#help
+{
+    margin-top: 20px;
+    margin-left: 50px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    text-transform: lowercase;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#help:hover
+{
+    font-weight: bold;
+}
+
+.posANDsize
+{
+    width: 20px;
+    height: auto;
+    margin-left: 5px;
+    margin-top: 10px;
+}
+
+#PhoneStyle
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+}
+
+#FlagUkr
+{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 1px;
+}
+
+#Phone
+{
+    width: 120px;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    border: solid 1px black;
+}
+
+#PassportNumIMG {
+    margin-top: 9px;
+}
+#PassportNum
+{
+    margin-bottom: 2px;
+}
+
+#Adress
+{
+    margin-left: 10px;
+}
+
+.ButtonStyle
+{
+    position: absolute;
+    width: 20px;
+    height: auto;
+    cursor: pointer;
+}
+
+.ButtonStyle:hover
+{
+    opacity: 0.5;
+}
+
+.ButtonStyleSecond
+{
+    margin-left: 98px;
+}
+
+.HelpButtonEmail
+{
+    align-items: center;
+    margin-left: 109px;
+    margin-top: 11px;
+}
+
+.HelpButtonPassword
+{
+    margin-top: 11px;
+}
+
+.ContainerToolip
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+.ToolipText
+{
+    width: 165px;
+    word-wrap: break-word;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    bottom: 35px;
+    margin-left: 25px;
+}
+
+
+.ContainerToolip .ToolipText
+{
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.ContainerToolip .ToolipText::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+
+.ContainerToolip:hover .ToolipText
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+.HelpButtonPassword
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 15px;
+    margin-right: 10px;
+}
+
+
+.ToolipTextPassword
+{
+    width: 300px;
+    word-wrap: break-word;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    bottom: 35px;
+    margin-left: 20px;
+
+}
+
+.HelpButtonPassword .ToolipTextPassword
+{
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.HelpButtonPassword .ToolipTextPassword::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 185px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+
+.HelpButtonPassword:hover .ToolipTextPassword
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.HelpHardPassword
+{
+    width: 15px;
+    margin-right: 5px;
+}
+
+.ContainerForHelpHardPassword
+{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+    word-wrap: break-word;
+}
+
+#CheckEM
+{
+    background-color: white;
+    color: black;
+    border: solid 1px black;
+    position: absolute;
+    display: none;
+    bottom: 700px;
+    z-index: 2;
+    width: 450px;
+    height: 200px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#CheckEM>img
+{
+    position: absolute;
+    width: 15px;
+    margin-left: 430px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+
+#CheckEM>img:hover
+{
+    opacity: 0.5;
+}
+
+#CheckEM>div
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+    background-color: black;
+    height: 55px;
+}
+
+#CheckEM>span
+{
+    position: absolute;
+    color: firebrick;
+    margin-top: 54.5px;
+    margin-left: 220px;
+    font-size: 12px;
+    display: none;
+}
+
+#CheckEM>div>input[type='submit']
+{
+
+    margin-left: 5px;
+    width: 50px;
+    height: 27px;
+    border: none;
+    outline: #D59A1A;
+    cursor: pointer;
+}
+
+#CheckEM>input
+{
+    font-size: 9px;
+    border: solid 2px black;
+    background: white;
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    margin-left: 237.5px;
+    margin-top: 15px;
+}
+#CheckEM>div>span
+{
+    margin-right: 10px;
+    font-size: 20px;
+    color: white;
+    font-family: 'Lobster', cursive;
+}
+
+#CheckEMHeadText
+{
+    position: absolute;
+    bottom: 175px;
+    font-size: 20px;
+
+}
+
+#CheckEMMainText
+{
+
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+
+}
+
+#CheckEMCare {
+
+    text-align: center;
+    font-size: 18px;
+    color: darkred;
+    font-family: 'Kosugi', sans-serif;
+}
+
+#FinalWindow {
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border: solid 4px white;
+    padding: 2px;
+    bottom: 600px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#FinalWindow>a>img {
+
+    width: 90px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#FinalWindow>a>img:hover { opacity: 0.5; }
+
+.CommonTextAfterRegistration {
+
+    font-size: 20px;
+}
+
+.SpecialTextAfterRegistration {
+    
+    font-size: 25px;
+}
+
+.WPO {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    color: black;
+}
