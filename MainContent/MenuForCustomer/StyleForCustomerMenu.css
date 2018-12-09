@@ -1,34 +1,261 @@
 * { margin: 0; padding: 0; }
-body { overflow: hidden; }
+body { overflow: auto; }
 
 
 main {
 
-    width: 100%;
-    height: 1080px;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+
+}
+
+.blockElement {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 360px;
+}
+
+
+
+
+#ProfileClient {
+
+    height: 400px;
+    background-color: yellow;
+    color: white;
+
+}
+
+
+.LT {
+    display: flex;
+    justify-self: flex-start;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+
+
+.LT>#LogOUT {
+
+    width: 50px;
+    height: 50px;
+    transition: width 0.3s, height 0.3s;
+    cursor: pointer;
+}
+
+#LogOUT:hover {
+
+    width: 60px;
+    height: 60px;
+}
+
+#Settings {
+
+    width: 50px;
+    display: flex;
+    justify-self: flex-end;
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: 10px;
+
+    transition: width 0.3s;
+    cursor: pointer;
+}
+
+#Settings:hover {
+
+    width: 60px;
+
+}
+
+#Time {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    align-self: flex-start;
+    margin-top: 10px;
+    align-items: center;
+    text-align: center;
+    font-family: 'Yeseva One', cursive;
+    font-size: 20px;
+    color: black;
+
+}
+
+#ClockTime {
+
+    margin-top: 15px;
+    font-size: 23px;
+}
+
+#MainInfoAboutUser {
+
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    color: black;
+    font-family: 'Russo One', sans-serif;
+    font-size: 35px;
+}
+
+#DisplayPost {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.SR {
+
+    display: flex;
+}
+
+.SR>img {
+
+    width: 20px;
+    height: 20px;
+}
+
+
+
+.SR>span {
+
+    color: white;
+    font-size: 20px;
+    cursor: help;
+    transition: font-size 0.5s;
+}
+
+.SR>span:hover {
+
+    font-size: 40px;
+}
+
+#AvatarANDFIO {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#UserPhoto {
+
+
+    background-color: black;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+
+}
+
+#UserPhoto>img {
+
+    display: flex;
+    justify-self: center;
+    align-self: center ;
+    width: 80px;
+    margin-right: 10px;
+    transition: width 0.5s;
+}
+
+#UserPhoto>img:hover {
+
+    width: 100px;
 
 
 }
 
-#ProfileClient {
+.RegProfile {
 
-    width: 100%;
-    height: 33%;
-    background-color: yellow;
+    display: flex;
+    align-self: flex-end;
+    justify-content: center;
+    position: absolute;
+    align-items: center;
+    font-family: 'Kurale', serif;
+    font-size: 20px;
+    transition: font-size 0.5s;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+
+}
+
+.RegProfile:hover {
+
+    font-size: 23px;
+
+}
+
+.statistic {
+
+    right: 92%;
+    cursor: pointer;
+
+}
+
+.email {
+
+    cursor: default;
+}
+
+.regUserProf {
+
+    left: 87%;
+    cursor: pointer;
 }
 
 #ArchiveSent {
 
+    background-color: #FFBE2E;
+    display: flex;
+    align-items: center;
+    min-height: 360px;
     width: 50%;
-    height: 100%;
-    background-color: green;
+}
+
+#ArchiveSent>img {
+    position: absolute;
+    z-index: 0;
+    width: 300px;
+    margin-left: 630px;
+}
+
+#ArchiveSent>a {
+
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    margin-left: 80px;
+    transition: font-size 0.5s;
+}
+
+#ArchiveSent>a:hover {
+
+    font-size: 35px;
 }
 
 #ArchiveReceived {
 
-    width: 50%;
-    height: 100%;
     background-color: orangered;
+    display: flex;
+    align-items: center;
+    min-height: 360px;
+    width: 50%;
 }
 
 #SendPost {
@@ -43,11 +270,10 @@ main {
     width: 30%;
     height: 100%;
     background-color: red;
-
 }
 
-#Archive, #SendANDHelp {
+#SendANDHelp {
 
     display: flex;
-    height: 33.3333%;
+    height: 219px;
 }
