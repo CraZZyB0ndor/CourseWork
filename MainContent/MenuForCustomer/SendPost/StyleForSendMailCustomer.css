@@ -1,0 +1,94 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+
+}
+
+#HeaderDocument {
+
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 35px;
+    text-align: center;
+
+}
+
+#BlockOfMainData {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: rgba(206, 205, 205, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#ToUser {
+
+    display: flex;
+    //justify-content: space-between;
+    align-items: center;
+}
+
+#FromUser {
+
+    display: flex;
+    //justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#InputDataToUser {
+
+    font-size: 25px;
+    font-family: 'Cuprum', sans-serif;
+    border: solid 1px black;
+    margin-left: 2.7%;
+    width: 30%;
+}
+
+.ClearToField {
+
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.ClearToField:hover {
+
+    opacity: 0.5;
+}
+
+.CheckSearchEmail {
+
+    width: 30px;
+    margin-left: 10px;
+}
+
+.ClearToField {
+
+    width: 30px;
+    margin-left: 1%;
+
+}
+
+.HeadMainInfo {
+
+    font-size: 30px;
+    font-family: 'Cuprum', sans-serif;
+    font-weight: bold;
+}
+
+#InfoUserFromDB {
+
+    font-size: 25px;
+    font-family: 'Cuprum', sans-serif;
+    margin-left: 0.7%;
+    background-color: black;
+    color: #00D363;
+}

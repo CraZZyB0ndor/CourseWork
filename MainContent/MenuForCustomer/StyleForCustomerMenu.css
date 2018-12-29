@@ -1,5 +1,8 @@
 * { margin: 0; padding: 0; }
-body { overflow: auto; }
+body {
+    overflow: auto;
+    background-color: black;
+}
 
 
 main {
@@ -18,13 +21,9 @@ main {
     min-height: 360px;
 }
 
-
-
-
 #ProfileClient {
 
     height: 400px;
-    background-color: yellow;
     color: white;
 
 }
@@ -128,10 +127,9 @@ main {
 }
 
 
-
 .SR>span {
 
-    color: white;
+    color: black;
     font-size: 20px;
     cursor: help;
     transition: font-size 0.5s;
@@ -149,15 +147,6 @@ main {
     align-items: center;
 }
 
-#UserPhoto {
-
-
-    background-color: black;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-
-}
 
 #UserPhoto>img {
 
@@ -172,7 +161,6 @@ main {
 #UserPhoto>img:hover {
 
     width: 100px;
-
 
 }
 
@@ -200,7 +188,8 @@ main {
 
 .statistic {
 
-    right: 92%;
+    position: absolute;
+    right: 90%;
     cursor: pointer;
 
 }
@@ -212,64 +201,182 @@ main {
 
 .regUserProf {
 
-    left: 87%;
+    position: absolute;
+    left: 85%;
     cursor: pointer;
 }
 
 #ArchiveSent {
 
-    background-color: #FFBE2E;
     display: flex;
+    position: absolute;
+    left: 0px;
     align-items: center;
     min-height: 360px;
     width: 50%;
+    font-size: 30px;
+    cursor: pointer;
+    z-index: 2;
+    text-decoration: none;
+
+    transition: all 0.1s;
+
 }
 
 #ArchiveSent>img {
+
     position: absolute;
     z-index: 0;
     width: 300px;
-    margin-left: 630px;
+    margin-left: 510px;
 }
 
-#ArchiveSent>a {
+#ArchiveSent>span {
+
+    z-index: 1;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 80px;
+    transition: font-size 0.5s;
+}
+
+#ArchiveSent:hover {
+
+    font-size: 35px;
+    border: solid 1px black;
+
+    min-height: 380px;
+}
+
+#ArchiveReceived {
+
+    position: absolute;
+    right: 0px;
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    min-height: 360px;
+    width: 49.9%;
+    cursor: pointer;
+    z-index: 2;
+    text-decoration: none;
+
+    transition: all 0.1s;
+}
+
+#ArchiveReceived>img {
+
+    position: absolute;
+    z-index: 0;
+    width: 300px;
+    margin-left: 510px;
+}
+
+#ArchiveReceived>span {
 
     z-index: 1;
     text-decoration: none;
     color: black;
     text-transform: uppercase;
     font-family: 'Russo One', sans-serif;
-    font-size: 30px;
     margin-left: 80px;
     transition: font-size 0.5s;
 }
 
-#ArchiveSent>a:hover {
+#ArchiveReceived:hover {
 
     font-size: 35px;
+    border: solid 1px black;
+
+    min-height: 380px;
 }
 
-#ArchiveReceived {
+#ArchiveSendANDReceivedPost {
 
-    background-color: orangered;
+    position: absolute;
+    left: 0px;
+    font-size: 25px;
     display: flex;
     align-items: center;
-    min-height: 360px;
-    width: 50%;
+    height: 200px;
+    width: 60%;
+    cursor: pointer;
+    margin-top: 2px;
+    z-index: 1;
+    text-decoration: none;
+
+    transition: all 0.1s;
 }
 
-#SendPost {
+#ArchiveSendANDReceivedPost>img {
 
-    width: 70%;
-    height: 100%;
-    background-color: blue;
+    position: absolute;
+    z-index: 0;
+    width: 190px;
+    margin-left: 780px;
+}
+
+#ArchiveSendANDReceivedPost>span {
+
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 80px;
+    transition: font-size 0.5s;
+}
+
+#ArchiveSendANDReceivedPost:hover {
+
+    font-size: 30px;
+    border: solid 1px black;
+
 }
 
 #OnlineHelp {
 
-    width: 30%;
-    height: 100%;
-    background-color: red;
+    position: absolute;
+    right: 0px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 39.9%;
+    cursor: pointer;
+    margin-top: 2px;
+    z-index: 1;
+    text-decoration: none;
+
+    transition: all 0.1s;
+
+}
+
+#OnlineHelp>img {
+
+    position: absolute;
+    z-index: 0;
+    width: 190px;
+    margin-left: 450px;
+}
+
+#OnlineHelp>span {
+
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    margin-left: 80px;
+    transition: font-size 0.5s;
+}
+
+#OnlineHelp:hover {
+
+    font-size: 30px;
+    border: solid 1px black;
+
 }
 
 #SendANDHelp {

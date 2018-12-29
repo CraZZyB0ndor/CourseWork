@@ -301,10 +301,10 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="210" />
-    <option name="y" value="159" />
+    <option name="x" value="265" />
+    <option name="y" value="23" />
     <option name="width" value="960" />
-    <option name="height" value="1050" />
+    <option name="height" value="970" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
