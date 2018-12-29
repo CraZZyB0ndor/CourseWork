@@ -9,7 +9,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    background-color: black;
+    background-color: white;
 
 }
 
@@ -382,5 +382,5 @@ main {
 #SendANDHelp {
 
     display: flex;
-    height: 219px;
+    height: 205px;
 }

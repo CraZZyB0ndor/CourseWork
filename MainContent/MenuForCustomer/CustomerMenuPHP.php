@@ -36,11 +36,11 @@ if ($ArrResult === false) {
 </head>
 <body onload="startTime()">
 
-
+<main>
 
     <form method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="application/x-www-form-urlencoded">
 
-    <div id="ProfileClient" class="blockElement" style="background-image: url('Images/abstract-black-and-white-blur-261763.jpg'); background-attachment: fixed">
+    <div id="ProfileClient" class="blockElement" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed">
 
 
         <a href="DeleteCookies.php" class="LT"><img id="LogOUT" name="LogOUT" src="Images/logout.png"></a>
@@ -90,7 +90,7 @@ if ($ArrResult === false) {
     <div id="Archive" class="blockElement">
 
 
-           <a id="ArchiveSent" href="SendPost/SendMailCustomer.php" style="background-image: url('Images/abstract-black-and-white-blur-261763.jpg'); background-attachment: fixed;">
+           <a id="ArchiveSent" href="SendPost/SendMailCustomer.php" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
         <span>відправити пошту</span>
             <img src="Images/email.png" >
@@ -100,7 +100,7 @@ if ($ArrResult === false) {
 
 
 
-        <a id="ArchiveReceived" style="background-image: url('Images/abstract-black-and-white-blur-261763.jpg'); background-attachment: fixed;">
+        <a id="ArchiveReceived" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
             <span class="SendLetter">Прийняти пошту</span>
             <img src="Images/envelope.png">
@@ -112,7 +112,7 @@ if ($ArrResult === false) {
 
     <div id="SendANDHelp" >
 
-        <a id="ArchiveSendANDReceivedPost" style="background-image: url('Images/abstract-black-and-white-blur-261763.jpg'); background-attachment: fixed;">
+        <a id="ArchiveSendANDReceivedPost" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
             <span class="SendLetter">Архів прийнятої і відправленої пошти</span>
             <img src="Images/branding.png">
@@ -120,12 +120,12 @@ if ($ArrResult === false) {
         </a>
 
         
-        <div id="OnlineHelp" style="background-image: url('Images/abstract-black-and-white-blur-261763.jpg'); background-attachment: fixed;">
+        <a id="OnlineHelp" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
             <span class="SendLetter">онлайн допомога</span>
             <img src="Images/question-mark.png">
 
-        </div>
+        </a>
 
     </div>
 

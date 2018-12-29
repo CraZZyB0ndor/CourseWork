@@ -65,13 +65,67 @@ if ($ArrFSPNameUser == false) {
 
         </div>
 
+            <div id="ChooseType">
+
+                <span id="titleToListPost">вид пошти:</span>
+
+                <select name="ChooseTypeOfPost" id="SelectChoose" onchange="DetermineSelectIndex();">
+
+                    <option id="1L">лист</option>
+                    <option id="2B">посилка</option>
+                    <option id="3C">грощі</option>
+
+                </select>
+
+            </div>
+
+
+
         </div>
 
-        <hr noshade style="height: 11%; width: 1px; background-color: black; position: absolute; left: 50%; top: 8%">
+
+        <hr noshade style="height: 10.5%; width: 1px; background-color: black; position: absolute; left: 50%; top: 10%; border: none;">
+
+
+
+        <div class="HeaderOfChooseType"><span id="HeaderForTextForChooseType"></span></div>
+
+
+
+        <div class="ForLetter">
+
+            <input type="text" placeholder="Тема" id="ThemeLetter">
+
+            <input type="text" placeholder="Основна частина…" id="MainCintentLetter">
+
+
+            <span id="ErrorReceived"></span>
+
+            <a href=""></a>
+
+        </div>
+
+
+        <div class="ForBox">
+
+
+
+        </div>
+
+
+        <div class="ForCash">
+
+
+
+        </div>
+
+
 
     </form>
 
 </main>
+
+<script src="JavaScroptForSendMailCustomers.js"></script>
 
 </body>
 </html>
