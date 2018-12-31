@@ -19,8 +19,28 @@ function DetermineInfoAboutUser($connectMYSQL) {
 }
 
 
-function DetermineAllEmailOfUsers() {
+function DetermineAllUsers($connectMYSQL, $ID) {
 
+
+    if ($_COOKIE['Sender-ID'] == $ID ) {
+
+        return false;
+    }
+
+    $query = "SELECT `FirstName`, `SecondName`, `Patronymic`, `E-mail` FROM `User` WHERE `Sender-ID` = ". $ID;
+
+    $data = mysqli_query($connectMYSQL, $query);
+
+    if (mysqli_num_rows($data) >= 1) {
+
+       $row =  mysqli_fetch_assoc($data);
+
+        return $row;
+
+    } else {
+
+        return false;
+    }
 
 }
 

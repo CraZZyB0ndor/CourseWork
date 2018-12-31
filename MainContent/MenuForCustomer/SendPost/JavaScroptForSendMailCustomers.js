@@ -8,25 +8,26 @@ function DetermineSelectIndex() {
 
     var selectedId = option.getAttribute('id');
 
-    var WriteTo = document.getElementById('HeaderForTextForChooseType');
 
     switch (selectedId) {
 
         case '1L':
 
-            WriteTo.textContent = 'ЛИСТ';
+
             break;
 
         case '2B':
 
-            WriteTo.textContent = 'ПОСИЛКА';
+
             break;
 
         case '3C':
 
-            WriteTo.textContent = 'ГРОЩІ';
+
             break;
     }
 
 }
+
+
 

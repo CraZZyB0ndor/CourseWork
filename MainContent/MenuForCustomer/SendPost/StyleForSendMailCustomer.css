@@ -51,7 +51,7 @@ body {
     font-family: 'Cuprum', sans-serif;
     border: solid 1px black;
     margin-left: 2.7%;
-    width: 30%;
+    width: 40%;
 }
 
 .ClearToField {
@@ -121,23 +121,69 @@ body {
     border: solid black 1px;
 }
 
-#HeaderForTextForChooseType {
 
-    display: flex;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    justify-content: center;
-    align-items: center;
-    color: #009BE9;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-    background-color: rgba(0, 0, 0, 0.5);
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+.ErrorReceived {
 
-    font-size: 40px;
-    
+
+    font-family: 'Russo One', sans-serif;
+
+    color: darkred;
+    text-transform: uppercase;
+    position: absolute;
+    bottom: 75px;
+}
+
+.SendKey {
+
+    margin-top: 15px;
+    font-family: 'Russo One', sans-serif;
+    font-size: 30px;
+    background-color: #000;
+    color: royalblue;
+    text-transform: uppercase;
+    cursor: pointer;
+    padding: 10px;
+    border: solid 1px white;
+    transition: opacity 0.3s;
+}
+
+.SendKey:hover {
+    opacity: 0.7;
+}
+
+button:active, button:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+    border: 0;
 }
 
 .ForLetter {
 
-    background-color: red;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    align-items: center;
+    height: 680px;
 }
+
+#ThemeLetter, #MainContentLetter {
+
+    font-size: 25px;
+    border: solid black 1px;
+    width: 97%;
+}
+
+#ThemeLetter {
+
+    margin-top: 25px;
+    font-family: 'Russo One', sans-serif;
+}
+
+#MainContentLetter {
+
+    font-family: 'Playfair Display SC', serif;
+    margin-top: 20px;
+    height: 500px;
+}
+

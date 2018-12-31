@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $serverName = "localhost";
 $userName = "root";
 $password = "";
@@ -11,6 +13,7 @@ mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_c
 
 
 include 'GetDataFromDB.php';
+include 'CheckToEmail.php';
 
 $ArrFSPNameUser = DetermineInfoAboutUser($connectMySQL);
 
@@ -18,6 +21,21 @@ if ($ArrFSPNameUser == false) {
 
     print '#ERROR';
 }
+
+
+if ( isset($_POST['SendLetterButton']) ) {
+
+    $_SESSION['Email'] = $_POST['Email_to_user'];
+    $_SESSION['Theme'] = $_POST['ThemeLetterPHP'];
+    $_SESSION['Content'] = $_POST['MainContentLetterPHP'];
+
+    $ErrorReceived = CheckEmail($connectMySQL);
+
+} else {
+
+    $ErrorReceived = "";
+}
+
 
 ?>
 <!doctype html>
@@ -29,10 +47,11 @@ if ($ArrFSPNameUser == false) {
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Russo+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Russo+One" rel="stylesheet">
     <link rel="stylesheet" href="StyleForSendMailCustomer.css">
     <title>Відправити пошту</title>
 </head>
-<body>
+<body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
 <main>
 
@@ -45,12 +64,38 @@ if ($ArrFSPNameUser == false) {
         <div id="ToUser">
 
             <span class="HeadMainInfo">Кому: </span>
-            <input id="InputDataToUser" type="text">
+            <input id="InputDataToUser" type="text" list="users" name="Email_to_user">
             <img class="ClearToField" src="Images/eraser.png" onclick="document.getElementById('InputDataToUser').value = '';" title="Очистити поле">
-            <img class="CheckSearchEmail CheckTo" src="Images/confirm.png">
 
         </div>
 
+            <datalist id="users">
+
+                <?php
+
+
+                $query_num_users = "SELECT COUNT(`Sender-ID`) FROM `User`";
+
+                $data_num_users = mysqli_query($connectMySQL, $query_num_users);
+
+                $NumOfUser = mysqli_fetch_array($data_num_users);
+
+
+                for ($i = 0; $i <= $NumOfUser[0]; $i++ ) {
+
+                    $ArrInfoUser = DetermineAllUsers($connectMySQL, $i);
+
+                    if ($ArrInfoUser != false) {
+
+                            print "<option>". $ArrInfoUser['SecondName'] . " " . $ArrInfoUser['FirstName'] . " " . $ArrInfoUser['Patronymic'] .
+                           " (" . $ArrInfoUser['E-mail'] .") " ."</option>";
+
+                    }
+                }
+
+                ?>
+
+            </datalist>
 
         <div id="FromUser">
 
@@ -88,20 +133,17 @@ if ($ArrFSPNameUser == false) {
 
 
 
-        <div class="HeaderOfChooseType"><span id="HeaderForTextForChooseType"></span></div>
-
-
 
         <div class="ForLetter">
 
-            <input type="text" placeholder="Тема" id="ThemeLetter">
+            <input type="text" placeholder="Тема" id="ThemeLetter" name="ThemeLetterPHP">
 
-            <input type="text" placeholder="Основна частина…" id="MainCintentLetter">
+            <textarea placeholder="Основна частина…" id="MainContentLetter" name="MainContentLetterPHP"></textarea>
 
 
-            <span id="ErrorReceived"></span>
+            <span class="ErrorReceived"><?php echo $ErrorReceived; ?></span>
 
-            <a href=""></a>
+            <input type="submit" name="SendLetterButton"  class="SendKey" value="НАДІСЛАТИ"/>
 
         </div>
 
@@ -126,6 +168,26 @@ if ($ArrFSPNameUser == false) {
 </main>
 
 <script src="JavaScroptForSendMailCustomers.js"></script>
+
+<?php
+
+
+if ( array_key_exists('Email', $_SESSION) ) {
+
+    print "<script>document.getElementById('InputDataToUser').value = '". $_SESSION['Email'] ."';</script>";
+}
+
+if ( array_key_exists('Theme', $_SESSION) ) {
+
+    print "<script>document.getElementById('ThemeLetter').value = '". $_SESSION['Theme'] ."';</script>";
+}
+
+if ( array_key_exists('Content', $_SESSION) ) {
+
+    print "<script>document.getElementById('MainContentLetter').value = '". $_SESSION['Content'] ."';</script>";
+}
+
+?>
 
 </body>
 </html>
