@@ -69,6 +69,8 @@ if ( isset($_POST['SendLetterButton']) ) {
 
         </div>
 
+            <?php //echo "<script>alert('". date("Y-m-d H:i:s") ."');</script>" ?>
+
             <datalist id="users">
 
                 <?php

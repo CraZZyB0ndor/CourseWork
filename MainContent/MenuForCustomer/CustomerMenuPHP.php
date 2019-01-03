@@ -56,8 +56,8 @@ if ($ArrResult === false) {
 
             <div id="DisplayPost">
 
-                <div class="SR"><span title="Кількість відправленої пошти, яка знаходиться в дорозі">3</span><img src="Images/long-arrow-pointing-up.png"></div>
-                <div class="SR"><span title="Кількість пошти, яка чекає підтвердження">5</span><img src="Images/down-arrow.png"></div>
+                <div class="SR"><span title="Кількість відправленої пошти, яка знаходиться в дорозі" id="TO"></span><img src="Images/long-arrow-pointing-up.png"></div>
+                <div class="SR"><span title="Кількість пошти, яка чекає підтвердження" id="FROM"></span><img src="Images/down-arrow.png"></div>
 
             </div>
 
@@ -102,7 +102,8 @@ if ($ArrResult === false) {
 
         <a id="ArchiveReceived" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
-            <span class="SendLetter">Прийняти пошту</span>
+            <span class="SendLetter">Прийняти пошту <sup id="FROMT" style="background-color: darkred;
+    border-radius: 100px; color: white; width: 40px; height: 40px; margin-right: 10px; display: flex; justify-content: center; align-items: center;"></sup></span>
             <img src="Images/envelope.png">
 
         </a>
@@ -114,7 +115,8 @@ if ($ArrResult === false) {
 
         <a id="ArchiveSendANDReceivedPost" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
-            <span class="SendLetter">Архів прийнятої і відправленої пошти</span>
+            <span class="SendLetter">Архів прийнятої і відправленої пошти <sup id="FROMTO" style="background-color: darkred;
+    border-radius: 100px; color: white; width: 40px; height: 40px; margin-right: 10px; display: flex; justify-content: center; align-items: center;"></sup></span>
             <img src="Images/branding.png">
             
         </a>
@@ -135,6 +137,31 @@ if ($ArrResult === false) {
 </main>
 
 <script src="Date.js"></script>
+
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
+<script>
+
+
+    //location.reload(true);
+
+
+    $("#TO").load("TO.php");
+    $("#FROM").load("FROM.php");
+    $("#FROMT").load("FROM.php");
+    $("#FROMTO").load("FROMTO.php");
+
+    setInterval(function(){
+
+        $("#TO").load("TO.php");
+        $("#FROM").load("FROM.php");
+        $("#TO").load("TO.php");
+        $("#FROMT").load("FROM.php");
+        $("#FROMTO").load("FROMTO.php");
+
+    }, 3000);
+
+</script>
 
 </body>
 </html>

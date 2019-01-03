@@ -330,7 +330,7 @@ main {
 
 #ArchiveSendANDReceivedPost:hover {
 
-    font-size: 30px;
+    font-size: 28px;
     border: solid 1px black;
 
 }
@@ -383,4 +383,11 @@ main {
 
     display: flex;
     height: 205px;
+}
+
+.SendLetter {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
