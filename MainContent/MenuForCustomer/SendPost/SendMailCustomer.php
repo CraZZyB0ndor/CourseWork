@@ -154,12 +154,86 @@ if ( isset($_POST['SendLetterButton']) ) {
 
 
 
+            <div class="TypeOfBox">
+
+                <span class="headToBox">Тип:</span>
+
+                <select name="ChooseTypeOfBox" id="SelectChooseBox">
+
+                    <option id="">Пристрої</option>
+                    <option id="">Друковані вироби</option>
+                    <option id="">Вироби із дерева</option>
+                    <option id="">Вироби із тканини</option>
+                    <option id="">Вироби із металу</option>
+                    <option id="">Вироби зі скла</option>
+                    <option id="">Речовини</option>
+
+                </select>
+
+            </div>
+
+            <div class="weightBox">
+
+                <span class="headToBox">Вага:</span>
+
+                <input type="number" min="1" max="100"  step="1" class="InputFieldBox">
+
+                <span class="headToBox">КГ</span>
+
+            </div>
+
+            <div id="ContainerDescBox">
+
+                <div id="WaringCheckBox">
+
+                    <input type="checkbox" class="InputFieldBox" id="WaringCheckBoxElement">
+                    <span class="waringBox">Необхідна додаткова обережність під час транспортування</span>
+
+                </div>
+
+                <span class="headToBox headDescBox">Опис:</span>
+
+                <textarea type="text" class="InputFieldBox" id="DescBox"></textarea>
+
+            </div>
+
+            <input type="submit" name="SendBoxButton"  class="SendKey" value="НАДІСЛАТИ"/>
+
+
+
         </div>
 
 
         <div class="ForCash">
 
+            <div class="TypeOfCash">
 
+                <span class="headToCash">Сума:</span>
+
+                <input type="number" min="1" class="InputFieldCash">
+
+                <select name="Currency" id="CurrencyStyle">
+
+                    <option id="UA">ГРИВНІ</option>
+                    <option id="RU">РУБЛІ</option>
+                    <option id="EU">ЄВРО</option>
+                    <option id="US">ДОЛАРИ</option>
+                    <option id="EN">ФУНТИ</option>
+
+                </select>
+
+            </div>
+
+
+            <div id="DescriptionMoney">
+
+                <span class="headToCash headDescCash">Опис:</span>
+
+                <textarea type="text" class="InputFieldBox" id="DescBox"></textarea>
+
+            </div>
+
+            <input type="submit" name="SendCashButton"  class="SendKey" value="НАДІСЛАТИ"/>
 
         </div>
 

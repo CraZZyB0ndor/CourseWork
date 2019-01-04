@@ -187,3 +187,107 @@ button::-moz-focus-inner {
     height: 500px;
 }
 
+.ForBox, .ForCash {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.InputFieldBox, #SelectChooseBox, .InputFieldBox, .InputFieldCash {
+
+    font-size: 22px;
+    font-family: 'Cuprum', sans-serif;
+    border: solid black 1px;
+}
+
+.TypeOfBox, .TypeOfCash {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.InputFieldCash {
+
+    width: 100px;
+}
+
+.headToBox, .headToCash {
+
+    font-size: 25px;
+    font-weight: bold;
+    font-family: 'Cuprum', sans-serif;
+    margin-right: 10px;
+}
+
+.weightBox {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.headDescBox, .headDescCash {
+
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+#DescBox {
+
+    height: 200px;
+    width: 350px;
+}
+
+#WaringCheckBox {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    //background-color: #000;
+    font-family: 'Cuprum', sans-serif;
+    text-transform: uppercase;
+    font-size: 22px;
+    color: #D20036;
+
+}
+
+#WaringCheckBoxElement {
+
+    background-color: #000;
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#ContainerDescBox {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ValuteImg {
+
+    width: 22px;
+}
+
+#CurrencyStyle {
+
+    margin-left: 10px;
+    font-size: 22px;
+}
+
+#DescriptionMoney {
+
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+}
