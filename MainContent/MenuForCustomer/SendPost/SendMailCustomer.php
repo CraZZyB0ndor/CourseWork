@@ -14,6 +14,9 @@ mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_c
 
 include 'GetDataFromDB.php';
 include 'CheckToEmail.php';
+include 'CheckToBox.php';
+include "CheckToCash.php";
+include 'SelectItem.php';
 
 $ArrFSPNameUser = DetermineInfoAboutUser($connectMySQL);
 
@@ -22,19 +25,9 @@ if ($ArrFSPNameUser == false) {
     print '#ERROR';
 }
 
+$ErrorReceived = "";
 
-if ( isset($_POST['SendLetterButton']) ) {
-
-    $_SESSION['Email'] = $_POST['Email_to_user'];
-    $_SESSION['Theme'] = $_POST['ThemeLetterPHP'];
-    $_SESSION['Content'] = $_POST['MainContentLetterPHP'];
-
-    $ErrorReceived = CheckEmail($connectMySQL);
-
-} else {
-
-    $ErrorReceived = "";
-}
+$SelectedID = 0;
 
 
 ?>
@@ -50,10 +43,47 @@ if ( isset($_POST['SendLetterButton']) ) {
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Russo+One" rel="stylesheet">
     <link rel="stylesheet" href="StyleForSendMailCustomer.css">
     <title>Відправити пошту</title>
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
+<?php
 
+if ( isset($_POST['SendLetterButton']) ) {
+
+    SelectItem();
+
+    $ErrorReceived = CheckEmail($connectMySQL);
+
+    $SelectedID = 1;
+
+
+}
+
+
+if ( isset($_POST['SendBoxButton']) ) {
+
+    SelectItem();
+
+    $ErrorReceived = CheckBox($connectMySQL);
+
+    $SelectedID = 2;
+}
+
+
+if ( isset($_POST['SendCashButton']) ) {
+
+    SelectItem();
+
+    $ErrorReceived = CheckCash($connectMySQL);
+
+    $SelectedID = 3;
+
+}
+
+?>
 <main>
+
+    <a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/CustomerMenuPHP.php"><img src="Images/restart.png" alt="back" id="RestartIMG" title="ГОЛОВНЕ МЕНЮ" onclick=""></a>
 
     <p id="HeaderDocument">відправка пошти</p>
 
@@ -118,9 +148,9 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <select name="ChooseTypeOfPost" id="SelectChoose" onchange="DetermineSelectIndex();">
 
-                    <option id="1L">лист</option>
-                    <option id="2B">посилка</option>
-                    <option id="3C">грощі</option>
+                    <option id="1L" value="лист">лист</option>
+                    <option id="2B" value="посилка">посилка</option>
+                    <option id="3C" value="грощі">грощі</option>
 
                 </select>
 
@@ -142,10 +172,28 @@ if ( isset($_POST['SendLetterButton']) ) {
 
             <textarea placeholder="Основна частина…" id="MainContentLetter" name="MainContentLetterPHP"></textarea>
 
+            <input type="submit" name="SendLetterButton"  class="SendKey" value="НАДІСЛАТИ"/>
 
             <span class="ErrorReceived"><?php echo $ErrorReceived; ?></span>
 
-            <input type="submit" name="SendLetterButton"  class="SendKey" value="НАДІСЛАТИ"/>
+
+            <div id="AfterSendLetter">
+
+                <div>
+                    <p></p>
+                    <img src="" alt="Sent">
+                </div>
+                
+
+                <div>
+
+                <a href="">ПЕРЕЙТИ НА ГОЛОВНУ СТОРІНКУ</a>
+                <a href="">ЗАЛИШИТИСЯ НА ЦІЙ СТОРІНЦІ</a>
+
+                </div>
+
+            </div>
+
 
         </div>
 
@@ -160,13 +208,13 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <select name="ChooseTypeOfBox" id="SelectChooseBox">
 
-                    <option id="">Пристрої</option>
-                    <option id="">Друковані вироби</option>
-                    <option id="">Вироби із дерева</option>
-                    <option id="">Вироби із тканини</option>
-                    <option id="">Вироби із металу</option>
-                    <option id="">Вироби зі скла</option>
-                    <option id="">Речовини</option>
+                    <option value="Пристрої">Пристрої</option>
+                    <option value="Друковані вироби">Друковані вироби</option>
+                    <option value="Вироби із дерева">Вироби із дерева</option>
+                    <option value="Вироби із тканини">Вироби із тканини</option>
+                    <option value="Вироби із металу">Вироби із металу</option>
+                    <option value="Вироби із скла">Вироби зі скла</option>
+                    <option value="Речовини">Речовини</option>
 
                 </select>
 
@@ -176,7 +224,7 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <span class="headToBox">Вага:</span>
 
-                <input type="number" min="1" max="100"  step="1" class="InputFieldBox">
+                <input type="number" min="1" max="100"  step="1" class="InputFieldBox" name="WeightOfBox" id="InputFiledBoxID">
 
                 <span class="headToBox">КГ</span>
 
@@ -186,20 +234,20 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <div id="WaringCheckBox">
 
-                    <input type="checkbox" class="InputFieldBox" id="WaringCheckBoxElement">
+                    <input type="checkbox" class="InputFieldBox" id="WaringCheckBoxElement" name="CheckboxBox">
                     <span class="waringBox">Необхідна додаткова обережність під час транспортування</span>
 
                 </div>
 
                 <span class="headToBox headDescBox">Опис:</span>
 
-                <textarea type="text" class="InputFieldBox" id="DescBox"></textarea>
+                <textarea type="text" class="InputFieldBox" id="DescBox" placeholder="Опис…" name="DescriptionBox"></textarea>
 
             </div>
 
             <input type="submit" name="SendBoxButton"  class="SendKey" value="НАДІСЛАТИ"/>
 
-
+            <span class="ErrorReceived"><?php echo $ErrorReceived; ?></span>
 
         </div>
 
@@ -210,15 +258,15 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <span class="headToCash">Сума:</span>
 
-                <input type="number" min="1" class="InputFieldCash">
+                <input type="number" min="1" class="InputFieldCash" name="SumOfCash" id="InputFieldCashID">
 
                 <select name="Currency" id="CurrencyStyle">
 
-                    <option id="UA">ГРИВНІ</option>
-                    <option id="RU">РУБЛІ</option>
-                    <option id="EU">ЄВРО</option>
-                    <option id="US">ДОЛАРИ</option>
-                    <option id="EN">ФУНТИ</option>
+                    <option value="UA">ГРИВНІ</option>
+                    <option value="RU">РУБЛІ</option>
+                    <option value="EU">ЄВРО</option>
+                    <option value="US">ДОЛАРИ</option>
+                    <option value="EN">ФУНТИ</option>
 
                 </select>
 
@@ -229,11 +277,13 @@ if ( isset($_POST['SendLetterButton']) ) {
 
                 <span class="headToCash headDescCash">Опис:</span>
 
-                <textarea type="text" class="InputFieldBox" id="DescBox"></textarea>
+                <textarea type="text" class="InputFieldBox" id="DescCash" placeholder="Опис…" name="DescrOfCash"></textarea>
 
             </div>
 
             <input type="submit" name="SendCashButton"  class="SendKey" value="НАДІСЛАТИ"/>
+
+            <span class="ErrorReceived"><?php echo $ErrorReceived; ?></span>
 
         </div>
 
@@ -263,7 +313,75 @@ if ( array_key_exists('Content', $_SESSION) ) {
     print "<script>document.getElementById('MainContentLetter').value = '". $_SESSION['Content'] ."';</script>";
 }
 
+
+if ( array_key_exists('Weight', $_SESSION) ) {
+
+    print "<script>document.getElementById('InputFiledBoxID').value = '". $_SESSION['Weight'] ."';</script>";
+}
+
+if ( array_key_exists('CheckBox', $_SESSION) ) {
+
+    if ( $_SESSION['CheckBox'] == 1 ) {
+
+        print "<script>document.getElementById('WaringCheckBoxElement').checked = true;</script>";
+
+    } else {
+
+        print "<script>document.getElementById('WaringCheckBoxElement').checked = false;</script>";
+    }
+
+}
+
+if ( array_key_exists('Description', $_SESSION) ) {
+
+    print "<script>document.getElementById('DescBox').value = '". $_SESSION['Description'] ."';</script>";
+}
+
+if ( array_key_exists('CashSum', $_SESSION) ) {
+
+    print "<script>document.getElementById('InputFieldCashID').value = '". $_SESSION['CashSum'] ."';</script>";
+}
+
+if ( array_key_exists('DescriptionCash', $_SESSION) ) {
+
+    print "<script>document.getElementById('DescCash').value = '". $_SESSION['DescriptionCash'] ."';</script>";
+}
+
 ?>
+
+<script>
+
+    switch (<?php echo $SelectedID; ?>) {
+
+        case 1:
+
+            $('#SelectChoose').val('лист');
+            DetermineSelectIndex();
+
+            break;
+
+        case 2:
+
+            $('#SelectChoose').val('посилка');
+            DetermineSelectIndex();
+
+            break;
+
+        case 3:
+
+            $('#SelectChoose').val('грощі');
+            DetermineSelectIndex();
+
+            break;
+
+    }
+
+
+    $('#SelectChooseBox').val('<?php echo $_SESSION['TypeOfBox']; ?>');
+
+    $('#CurrencyStyle').val('<?php echo $_SESSION['TypeOfCash']; ?>');
+
+</script>
 
 </body>
 </html>

@@ -124,14 +124,14 @@ body {
 
 .ErrorReceived {
 
-
     font-family: 'Russo One', sans-serif;
-
     color: darkred;
     text-transform: uppercase;
-    position: absolute;
-    bottom: 75px;
+    //position: absolute;
+    //bottom: 75px;
 }
+
+
 
 .SendKey {
 
@@ -185,6 +185,21 @@ button::-moz-focus-inner {
     font-family: 'Playfair Display SC', serif;
     margin-top: 20px;
     height: 500px;
+}
+
+#RestartIMG {
+
+    width: 70px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#RestartIMG:hover {
+
+    opacity: 0.5;
 }
 
 .ForBox, .ForCash {
@@ -290,4 +305,15 @@ button::-moz-focus-inner {
     margin-top: 15px;
     justify-content: center;
     align-items: center;
+}
+
+#AfterSendLetter {
+
+    background-color: #CED3D5;
+    border: solid black 1px;
+    position: absolute;
+    width: 500px;
+    height: 350px;
+    //filter: blur(1px);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
