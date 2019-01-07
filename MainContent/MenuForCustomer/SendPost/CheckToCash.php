@@ -69,6 +69,9 @@ function CheckCash($connectMySQL) {
 
                     mysqli_query($connectMySQL, $query_insert_to_waybill);
 
+                    include 'ClearEnterInfo.php';
+
+                    ClearSessionS();
 
                     return "";
 

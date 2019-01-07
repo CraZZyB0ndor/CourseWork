@@ -29,6 +29,8 @@ $ErrorReceived = "";
 
 $SelectedID = 0;
 
+$TypeOfDisplay = 'none';
+
 
 ?>
 <!doctype html>
@@ -56,6 +58,10 @@ if ( isset($_POST['SendLetterButton']) ) {
 
     $SelectedID = 1;
 
+    if ( $ErrorReceived == "" ) {
+
+        $TypeOfDisplay = 'flex';
+    }
 
 }
 
@@ -67,6 +73,12 @@ if ( isset($_POST['SendBoxButton']) ) {
     $ErrorReceived = CheckBox($connectMySQL);
 
     $SelectedID = 2;
+
+    if ( $ErrorReceived == "" ) {
+
+        $TypeOfDisplay = 'flex';
+    }
+
 }
 
 
@@ -77,6 +89,11 @@ if ( isset($_POST['SendCashButton']) ) {
     $ErrorReceived = CheckCash($connectMySQL);
 
     $SelectedID = 3;
+
+    if ( $ErrorReceived == "" ) {
+
+        $TypeOfDisplay = 'flex';
+    }
 
 }
 
@@ -176,25 +193,6 @@ if ( isset($_POST['SendCashButton']) ) {
 
             <span class="ErrorReceived"><?php echo $ErrorReceived; ?></span>
 
-
-            <div id="AfterSendLetter">
-
-                <div>
-                    <p></p>
-                    <img src="" alt="Sent">
-                </div>
-                
-
-                <div>
-
-                <a href="">ПЕРЕЙТИ НА ГОЛОВНУ СТОРІНКУ</a>
-                <a href="">ЗАЛИШИТИСЯ НА ЦІЙ СТОРІНЦІ</a>
-
-                </div>
-
-            </div>
-
-
         </div>
 
 
@@ -287,7 +285,28 @@ if ( isset($_POST['SendCashButton']) ) {
 
         </div>
 
+        <div id="ModalWindowSentPost">
 
+            <div id="AfterSendLetter">
+
+                <div>
+                    <img src="Images/checked.png" alt="Sent">
+                    <p>ЛИСТ УСПІШНО ВІДПРАВЛЕНО</p>
+                </div>
+
+
+                <div>
+
+                    <a href="GoToMainMenu.php">ПЕРЕЙТИ НА ГОЛОВНУ СТОРІНКУ</a>
+                    <a onclick="document.getElementById('ModalWindowSentPost').style.display = 'none';">ЗАЛИШИТИСЯ НА ЦІЙ СТОРІНЦІ</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <?php print "<script>document.getElementById('ModalWindowSentPost').style.display = '". $TypeOfDisplay ."'</script>"; ?>
 
     </form>
 

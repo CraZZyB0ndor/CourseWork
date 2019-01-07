@@ -307,13 +307,81 @@ button::-moz-focus-inner {
     align-items: center;
 }
 
+#ModalWindowSentPost {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+
+}
+
 #AfterSendLetter {
 
     background-color: #CED3D5;
     border: solid black 1px;
     position: absolute;
     width: 500px;
-    height: 350px;
-    //filter: blur(1px);
+    height: 310px;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    font-family: 'Russo One', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 15%;
 }
+
+#AfterSendLetter>div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#AfterSendLetter>div>a {
+
+    font-family: 'Cuprum', sans-serif;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    margin-top: 10px;
+    border: solid black 1px;
+    height: 50px;
+    width: 350px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #000;
+    background-color: #92999B;
+    cursor: pointer;
+    transition: color 1s;
+}
+
+#AfterSendLetter>div>a:hover {
+
+    background-color: #707374;
+}
+
+#AfterSendLetter>div:nth-child(1) {
+
+    margin-top: 20px;
+    font-size: 30px;
+}
+
+#AfterSendLetter>div>p {
+
+    margin-top: 10px;
+}
+
+#AfterSendLetter>div>img {
+
+    width: 100px;
+}
+

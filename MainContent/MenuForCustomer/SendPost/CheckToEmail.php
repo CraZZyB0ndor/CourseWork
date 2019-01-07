@@ -26,7 +26,7 @@ function CheckEmail($connectMySQL) {
 
                     if ( strlen(trim($_POST['ThemeLetterPHP'])) > 2 || strlen(trim($_POST['MainContentLetterPHP'])) > 10 ) {
 
-                        return "OK";
+                        //return "OK";
 
                         $ID_user_from = mysqli_real_escape_string($connectMySQL, $_COOKIE['Sender-ID']);
                         $ID_user_to = mysqli_real_escape_string($connectMySQL, $i);
@@ -65,6 +65,9 @@ function CheckEmail($connectMySQL) {
 
                         mysqli_query($connectMySQL, $query_insert_to_waybill);
 
+                        include 'ClearEnterInfo.php';
+
+                        ClearSessionS();
 
                         return "";
 

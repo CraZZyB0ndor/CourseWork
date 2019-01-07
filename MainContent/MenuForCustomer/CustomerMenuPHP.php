@@ -155,7 +155,6 @@ if ($ArrResult === false) {
 
         $("#TO").load("TO.php");
         $("#FROM").load("FROM.php");
-        $("#TO").load("TO.php");
         $("#FROMT").load("FROM.php");
         $("#FROMTO").load("FROMTO.php");
 

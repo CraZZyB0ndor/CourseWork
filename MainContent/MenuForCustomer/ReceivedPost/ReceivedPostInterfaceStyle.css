@@ -1,0 +1,226 @@
+* {
+
+    margin: 0px;
+    padding: 0px;
+}
+
+#RestartIMG {
+
+    width: 70px;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#RestartIMG:hover {
+
+    opacity: 0.5;
+}
+
+#HeaderDocument {
+
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-top: 20px;
+
+}
+
+#BlockOfMainData {
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin-top: 30px;
+    background-color: rgba(206, 205, 205, 0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.SizeIMG {
+
+    width: 50px;
+    height: 50px;
+}
+
+#SearchPost {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    //background-color: green;
+}
+
+#SearchPost>input {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+#SearchPost>img {
+
+    width: 40px;
+    height: 40px;
+
+    transition: opacity 0.3s;
+
+    cursor: pointer;
+}
+
+#SearchPost>img:hover {
+
+    opacity: 0.5;
+}
+
+#ControlPosts {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    //background-color: red;
+}
+
+#SortFilter {
+
+    display: flex;
+    flex-direction: row;
+    //justify-content: space-around;
+    align-items: center;
+
+    //width: 150px;
+
+    //background-color: yellow;
+}
+
+#SortFilter>img {
+
+    width: 50px;
+    height: 50px;
+
+    margin-left: 20px;
+
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+#SortFilter>img:hover {
+
+    opacity: 0.5;
+}
+
+#ActionPost {
+
+    display: flex;
+    flex-direction: row;
+    //justify-content: space-around;
+    align-items: center;
+
+    //width: 500px;
+
+    //background-color: gray;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+#ActionPost>input {
+
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+
+    margin-left: 20px;
+
+    border: solid black 2px;
+    padding: 2px;
+
+    cursor: pointer;
+}
+
+#ActionPost>input:nth-child(1) {
+
+    background-color: #878C8E;
+}
+
+#ActionPost>input:nth-child(1):hover {
+
+    background-color: #6D7173;
+}
+
+#ActionPost>input:nth-child(2) {
+
+    background-color: #DF0B00;
+}
+
+#ActionPost>input:nth-child(2):hover {
+
+    background-color: #AD0B02;
+}
+
+#RefreshHelp {
+
+    display: flex;
+    flex-direction: row;
+    //justify-content: space-around;
+    align-items: center;
+
+    //width: 200px;
+
+    //background-color: blue;
+}
+
+#RefreshHelp>input {
+
+    width: 50px;
+    height: 50px;
+
+    margin-left: 20px;
+
+    transition: opacity 0.3s;
+
+    cursor: pointer;
+}
+
+#RefreshHelp>input:hover {
+
+    opacity: 0.5;
+}
+
+#RefreshHelp>img {
+
+    width: 50px;
+    height: 50px;
+
+    border: solid black 2px;
+    border-radius: 100px;
+
+    margin-left: 20px;
+
+    padding: 5px;
+    
+    cursor: pointer;
+}
+
+#RefreshHelp>img:hover {
+
+    background-color: #AD0B02;
+}
+

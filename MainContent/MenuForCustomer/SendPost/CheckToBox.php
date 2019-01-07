@@ -2,7 +2,6 @@
 
 function CheckBox($connectMySQL) {
 
-
     $query_num_users = "SELECT COUNT(`Sender-ID`) FROM `User`";
 
 
@@ -72,6 +71,9 @@ function CheckBox($connectMySQL) {
 
                     mysqli_query($connectMySQL, $query_insert_to_waybill);
 
+                    include 'ClearEnterInfo.php';
+
+                    ClearSessionS();
 
                     return "";
 
