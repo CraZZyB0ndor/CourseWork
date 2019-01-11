@@ -32,32 +32,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="704">
-              <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
+            <state relative-caret-position="577">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#form#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#1;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#p#0;n#div#2;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/SelectInfoAboutPost.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+            <state>
+              <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -65,8 +70,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="815">
-              <caret line="226" selection-start-line="226" selection-end-line="226" />
+            <state relative-caret-position="165">
+              <caret line="434" column="17" selection-start-line="434" selection-start-column="17" selection-end-line="434" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -93,6 +98,7 @@
   <component name="FindInProjectRecents">
     <findStrings>
       <find>pointer</find>
+      <find>000</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -126,9 +132,10 @@
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/ClearEnterInfo.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/SelectInfoAboutPost.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/SelectInfoAboutPost.php" />
       </list>
     </option>
   </component>
@@ -176,6 +183,14 @@
               <item name="MainContent" type="462c0819:PsiDirectoryNode" />
               <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
               <item name="ReceivedPost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
+              <item name="MainContent" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
+              <item name="ReceivedPost" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
@@ -256,12 +271,12 @@
       <workItem from="1544280337211" duration="1732000" />
       <workItem from="1544352900151" duration="818000" />
       <workItem from="1544356261413" duration="29085000" />
-      <workItem from="1546119932486" duration="72401000" />
+      <workItem from="1546119932486" duration="93836000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="283315000" />
+    <option name="totallyTimeSpent" value="304750000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -441,13 +456,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-344">
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToCash.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1065">
@@ -473,13 +481,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
           <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="329" column="4" selection-start-line="329" selection-start-column="4" selection-end-line="329" selection-end-column="41" />
         </state>
       </provider>
     </entry>
@@ -511,44 +512,76 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-418">
+          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/blur-bright-close-up-1405773.jpg">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/filter.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="528">
+          <caret line="36" column="52" selection-start-line="36" selection-start-column="31" selection-end-line="36" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="329" column="4" selection-start-line="329" selection-start-column="4" selection-end-line="329" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-21">
-          <caret line="110" column="25" lean-forward="true" selection-start-line="110" selection-start-column="25" selection-end-line="110" selection-end-column="25" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="-744">
+          <caret line="201" lean-forward="true" selection-start-line="201" selection-end-line="201" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/mail.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="815">
-          <caret line="226" selection-start-line="226" selection-end-line="226" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="22" column="15" lean-forward="true" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="704">
-          <caret line="96" column="43" lean-forward="true" selection-start-line="96" selection-start-column="43" selection-end-line="96" selection-end-column="43" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="165">
+          <caret line="434" column="17" selection-start-line="434" selection-start-column="17" selection-end-line="434" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/SelectInfoAboutPost.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#input#0;n#div#2;n#div#1;n#div#0;n#form#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#1;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#2;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

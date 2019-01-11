@@ -15,6 +15,10 @@ function DisplayPosts($connectMySQL) {
         `Post` P, `Statuspost` S WHERE '". $_COOKIE['Sender-ID'] ."' = W.`ID-addressee` AND W.`ID-sender` = U.`Sender-ID` AND W.`ID-post` = P.`ID-post`
         AND P.`ID-post` = S.`ID-post` AND S.`StatusOfPost` = 'Доставлено'";
 
+        $do_query_select_some_posts = mysqli_query($connectMySQL, $query_get_info);
+
+        return $do_query_select_some_posts;
+
     } else {
 
         return "В ДАНИЙ ЧАС ДЛЯ ВАС НЕ МАЄ НОВОЇ ПОШТИ";

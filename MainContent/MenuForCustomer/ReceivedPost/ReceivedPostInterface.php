@@ -10,9 +10,9 @@ $connectMySQL = new mysqli($serverName, $userName, $password, $nameDataBase);
 mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
 include 'SelectInfoAboutPost.php';
+include "ViewPost.php";
 
-$ResultPosts = DisplayPosts($connectMySQL);
-
+$modal_text = "";
 
 ?>
 <!doctype html>
@@ -30,6 +30,36 @@ $ResultPosts = DisplayPosts($connectMySQL);
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
 </head>
+
+<div id="ModalWindow">
+
+
+    <div id="MainContentModalWindow">
+        <p id="TextActionModalWindow"></p>
+        <img src="Images/mail.png" onclick="document.getElementById('ModalWindow').style.display = 'none';">
+    </div>
+
+</div>
+
+<?php
+
+if ( isset($_POST['confirm']) ) {
+
+    echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлене до архіву';</script>";
+    echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+}
+
+if ( isset($_POST['disregard']) ) {
+
+    echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву'</script>";
+    echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+}
+
+$ResultPosts = DisplayPosts($connectMySQL);
+
+?>
 
 <body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
@@ -68,7 +98,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
                 <div id="ActionPost">
 
-            <input type="submit" value="ДО АРХІВУ">
+            <input type="submit" value="ПРИЙНЯТИ">
             <input type="submit" value="ВІДМОВИТИСЯ">
 
                 </div>
@@ -77,7 +107,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
                 <div id="RefreshHelp">
 
 
-            <input type="image" src="Images/refresh.png" title="Оновити пошту">
+            <input type="image" src="Images/refresh.png" title="Оновити пошту" style="outline: none;">
 
             <img src="Images/question.png" alt="help" title="Допомога">
 
@@ -94,11 +124,82 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
             <?php
 
-            echo "<p>".$ResultPosts."</p>";
+            if ( gettype($ResultPosts) == "string" ) {
+
+                echo "<p>".$ResultPosts."</p>";
+
+            } else if ( gettype($ResultPosts) == "object" ) {
+
+                for ($i = 0; true; $i++) {
+
+                    $arr_select_some_posts = mysqli_fetch_row($ResultPosts);
+
+                    if ($arr_select_some_posts != NULL) {
+
+
+                        echo "<div class=\"PostElement\">
+
+                <div>
+
+                    <label class=\"checkbox\">
+                        <input type=\"checkbox\" />
+                        <div class=\"checkbox__text\"></div>
+                    </label>
+
+
+                    <img src=\"Images/open-mail.png\" title=\"Відкрити повідомлення\">
+                </div>
+
+                <div>
+
+                    <a class=\"CheckPost\" title=\"Відкрити повідомлення\" href=''>
+                        
+                        <div>
+                            <p style=\"font-weight: bold; margin-right: 15px;\">Від: </p>
+                            <p>
+                            $arr_select_some_posts[0] $arr_select_some_posts[1] $arr_select_some_posts[2]
+                            ($arr_select_some_posts[3])
+                            </p>
+                        </div>
+
+                        <div>
+                            <p style=\"font-weight: bold; margin-right: 15px;\">Тема:</p>
+                            <p style='font-style: italic;'>$arr_select_some_posts[4]</p>
+                        </div>
+
+                        <div>
+                            <p style=\"font-weight: bold; margin-right: 15px;\">Час доставки:</p>
+                            <p>$arr_select_some_posts[5]</p>
+                        </div>
+
+                    </a>
+
+                    <div>
+
+                        <input type=\"submit\" value=\"ПРИЙНЯТИ\" name='confirm'>
+                        <input type=\"submit\" value=\"ВІДМОВИТИСЯ\" name='disregard'>
+
+                    </div>
+
+                </div>
+
+            </div> ";
+
+
+                    } else {
+
+                        break;
+
+                    }
+                }
+
+            }
+
+
 
             ?>
 
-        </div>
+
 
     </form>
 
