@@ -45,6 +45,7 @@ a {
     margin-top: 30px;
     background-color: rgba(206, 205, 205, 0.5);
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
 }
 
 .SizeIMG {
@@ -159,6 +160,7 @@ a {
     padding: 2px;
 
     cursor: pointer;
+    outline: none;
 }
 
 #ActionPost>input:nth-child(1) {
@@ -487,4 +489,9 @@ a {
 #MainContentModalWindow>img:hover {
 
     opacity: 0.7;
+}
+
+#MainControlPanel {
+
+    background-color: red;
 }

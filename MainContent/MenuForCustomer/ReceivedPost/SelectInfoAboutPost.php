@@ -11,7 +11,7 @@ function DisplayPosts($connectMySQL) {
 
     if ($arr_count_posts[0] > 0) {
 
-        $query_get_info = "SELECT U.`SecondName`, U.`FirstName`, U.`Patronymic`, U.`E-mail`, P.`DescPost`, S.`DateOfReceipt` FROM `User` U, `Waybill` W,
+        $query_get_info = "SELECT U.`SecondName`, U.`FirstName`, U.`Patronymic`, U.`E-mail`, P.`DescPost`, S.`DateOfReceipt`, P.`ID-post` FROM `User` U, `Waybill` W,
         `Post` P, `Statuspost` S WHERE '". $_COOKIE['Sender-ID'] ."' = W.`ID-addressee` AND W.`ID-sender` = U.`Sender-ID` AND W.`ID-post` = P.`ID-post`
         AND P.`ID-post` = S.`ID-post` AND S.`StatusOfPost` = 'Доставлено'";
 

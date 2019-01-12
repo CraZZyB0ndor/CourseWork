@@ -167,7 +167,7 @@ if ( isset($_POST['SendCashButton']) ) {
 
                     <option id="1L" value="лист">лист</option>
                     <option id="2B" value="посилка">посилка</option>
-                    <option id="3C" value="грощі">грощі</option>
+                    <option id="3C" value="грощі">гроші</option>
 
                 </select>
 

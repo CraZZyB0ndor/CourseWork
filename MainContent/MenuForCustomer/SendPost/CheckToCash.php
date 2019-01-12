@@ -41,7 +41,7 @@ function CheckCash($connectMySQL) {
                     $date_time = date("Y-m-d H:i:s");
 
                     $query_insert_post_inf = "INSERT INTO `Post` (`TypePost`, `WeightPost`, `DescPost`, `DateOfReception`) VALUES
-                                                                                    ('Грощі', '$WeightCash', '$desc_to_cash', '$date_time')";
+                                                                                    ('Гроші', '$WeightCash', '$desc_to_cash', '$date_time')";
 
 
                     //Query for insert information about post.

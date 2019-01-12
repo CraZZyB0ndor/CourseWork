@@ -10,7 +10,6 @@ $connectMySQL = new mysqli($serverName, $userName, $password, $nameDataBase);
 mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
 include 'SelectInfoAboutPost.php';
-include "ViewPost.php";
 
 $modal_text = "";
 
@@ -65,6 +64,8 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
 <main>
 
+
+
     <a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/CustomerMenuPHP.php"><img src="Images/restart.png" alt="back" id="RestartIMG" title="ГОЛОВНЕ МЕНЮ"></a>
 
     <p id="HeaderDocument">ПРИЙНЯТИ ПОШТУ</p>
@@ -117,8 +118,9 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
             </div>
 
+    </div>
 
-        </div>
+
 
         <div id="Posts">
 
@@ -129,6 +131,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
                 echo "<p>".$ResultPosts."</p>";
 
             } else if ( gettype($ResultPosts) == "object" ) {
+
 
                 for ($i = 0; true; $i++) {
 
@@ -152,7 +155,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
                 <div>
 
-                    <a class=\"CheckPost\" title=\"Відкрити повідомлення\" href=''>
+                    <a class=\"CheckPost\" title=\"Відкрити повідомлення\" href='ViewPost.php?NumDiv=" . "$arr_select_some_posts[6]'".">
                         
                         <div>
                             <p style=\"font-weight: bold; margin-right: 15px;\">Від: </p>
@@ -206,5 +209,6 @@ $ResultPosts = DisplayPosts($connectMySQL);
 </main>
 
 </body>
+
 
 </html>
