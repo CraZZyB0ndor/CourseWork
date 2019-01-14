@@ -2,6 +2,8 @@
 
 session_start();
 
+date_default_timezone_set('Ukraine');
+
 $serverName = "localhost";
 $userName = "root";
 $password = "";
@@ -222,7 +224,7 @@ if ( isset($_POST['SendCashButton']) ) {
 
                 <span class="headToBox">Вага:</span>
 
-                <input type="number" min="1" max="100"  step="1" class="InputFieldBox" name="WeightOfBox" id="InputFiledBoxID">
+                <input type="number" min="1" max="100"  step="0.001" class="InputFieldBox" name="WeightOfBox" id="InputFiledBoxID">
 
                 <span class="headToBox">КГ</span>
 

@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Ukraine');
+
 function CheckEmail($connectMySQL) {
 
     $query_num_users = "SELECT COUNT(`Sender-ID`) FROM `User`";
@@ -33,7 +35,7 @@ function CheckEmail($connectMySQL) {
                         $Theme = mysqli_real_escape_string($connectMySQL, $_POST['ThemeLetterPHP']);
                         $Context = mysqli_real_escape_string($connectMySQL, $_POST['MainContentLetterPHP']);
 
-                        $desc_to_letter = $Theme . " \n " . $Context;
+                        $desc_to_letter = $Theme . "æ325691çƒ©h" . " \n " . $Context;
                         $date_time = date("Y-m-d H:i:s");
 
                         $query_insert_post_inf = "INSERT INTO `Post` (`TypePost`, `WeightPost`, `DescPost`, `DateOfReception`) VALUES

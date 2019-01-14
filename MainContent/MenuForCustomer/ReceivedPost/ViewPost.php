@@ -29,7 +29,6 @@ if (mysqli_num_rows($do_query_post_content) >= 1) {
     header('Location: ' . "http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php");
 }
 
-
 ?>
 
 
@@ -46,6 +45,44 @@ if (mysqli_num_rows($do_query_post_content) >= 1) {
         <link rel="stylesheet" href="ViewPostStyle.css">
         <title>Перегляд пошти</title>
     </head>
+
+    <div id="ModalWindow">
+
+
+        <div id="MainContentModalWindow">
+            <p id="TextActionModalWindow"></p>
+            <img src="Images/mail.png" onclick="document.getElementById('ModalWindow').style.display = 'none'; document.location.href = 'http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php';">
+        </div>
+
+    </div>
+
+    <?php
+
+
+    if (isset($_POST['confirm'])) {
+
+        echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлене до архіву';</script>";
+        echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        $query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_GET['NumDiv'];
+
+        mysqli_query($connectMySQL, $query_confirm);
+
+    }
+
+    if (isset($_POST['refuse'])) {
+
+        echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву'</script>";
+        echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        $query_refuse = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_GET['NumDiv'];
+
+        mysqli_query($connectMySQL, $query_refuse);
+
+    }
+
+    ?>
+
     <body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
     
     <main>
@@ -56,12 +93,15 @@ if (mysqli_num_rows($do_query_post_content) >= 1) {
 
             <a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php" title="Назад"><img src="Images/restart.png" alt="back" id="RestartIMG"></a>
 
+            <form method="POST" action="<?php echo $_SERVER['PHP_SELF'] . "?NumDiv=" . $_GET['NumDiv']; ?>" enctype="application/x-www-form-urlencoded">
+
             <div id="ActionPost">
 
-                <input type="submit" value="ПРИЙНЯТИ">
-                <input type="submit" value="ВІДМОВИТИСЯ">
+                <input type="submit" name="confirm" onclick="" value="ПРИЙНЯТИ">
+                <input type="submit" name="refuse" onclick="" value="ВІДМОВИТИСЯ">
 
             </div>
+
 
         </div>
 
@@ -76,18 +116,45 @@ if (mysqli_num_rows($do_query_post_content) >= 1) {
         <div id="MainPartLetter">
 
             <p>
-                <span>
 
                     <?php
 
-                    // Написать условие отображение темы (если тип письма = "Лист", то тема есть, во всех остальных случаях ее нет).
+                    if ($array_query_post_content_data['TypePost'] == 'Лист') {
+
+                        $str = (string) $array_query_post_content_data['DescPost'];
+                        $arrayDesc = explode('æ325691çƒ©h', $str, strlen($str)-11 );
+
+                        echo "<span style='font-family: \"Russo One\", sans-serif;font-size: 20px; font-weight: bold;'>
+                                Тема: 
+                                <span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>". $arrayDesc[0] .".</span>
+                                </span><br><br>";
+                        echo "<span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>".  $arrayDesc[1] ."</span>";
+
+                    } else if ($array_query_post_content_data['TypePost'] == 'Гроші') {
+
+                        $str = (string) $array_query_post_content_data['DescPost'];
+                        $arrayDesc = explode('æ325691çƒ©h', $str, strlen($str)-11 );
+
+                        echo "<span style='font-family: \"Russo One\", sans-serif;font-size: 20px; font-weight: bold;'>
+                                Сума: 
+                                <span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>". $arrayDesc[0] .".</span>
+                                </span><br><br>";
+
+                        echo "<span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>".  $arrayDesc[1] ."</span>";
+
+                    } else if ($array_query_post_content_data['TypePost'] == 'Посилка') {
+
+                        $str = (string) $array_query_post_content_data['DescPost'];
+                        $arrayDesc = explode('æ325691çƒ©h', $str, strlen($str)-11 );
+
+                        echo "<span style='font-family: \"Russo One\", sans-serif;font-size: 20px; font-weight: bold;'>
+                                Тип посилки: 
+                                <span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>". $arrayDesc[0] .".</span>
+                                </span><br><br>";
+                        echo "<span style='font-family: \"Cuprum\", sans-serif; font-size: 20px;'>".  $arrayDesc[1] ."</span>";
+                    }
 
                     ?>
-
-                </span>
-
-
-                <?php echo $array_query_post_content_data['DescPost']; ?>
 
             </p>
 
@@ -104,6 +171,8 @@ if (mysqli_num_rows($do_query_post_content) >= 1) {
 
 
         </div>
+
+        </form>
 
     </main>
 

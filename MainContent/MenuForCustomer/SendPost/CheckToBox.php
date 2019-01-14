@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Ukraine');
+
 function CheckBox($connectMySQL) {
 
     $query_num_users = "SELECT COUNT(`Sender-ID`) FROM `User`";
@@ -38,7 +40,7 @@ function CheckBox($connectMySQL) {
 
                     $DescribeOfBox = mysqli_real_escape_string($connectMySQL, $_SESSION['Description']);
 
-                    $desc_to_box = $TypeBox . " \n\n " . $DescribeOfBox . "\n\n| " . $CareBox . " |";
+                    $desc_to_box = $TypeBox . "æ325691çƒ©h \n " . $DescribeOfBox . "æ325691çƒ©h\n\n| " . $CareBox . " |";
 
                     $date_time = date("Y-m-d H:i:s");
 

@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('Ukraine');
+
 function CheckCash($connectMySQL) {
 
     $query_num_users = "SELECT COUNT(`Sender-ID`) FROM `User`";
@@ -36,7 +38,7 @@ function CheckCash($connectMySQL) {
                     $WeightCash = $_SESSION['CashSum'] * 0.001;
                     $DescribeOfCash = mysqli_real_escape_string($connectMySQL, $_SESSION['DescriptionCash']);
 
-                    $desc_to_cash = $CashSum . " (" . $TypeCash .") \n\n " . $DescribeOfCash;
+                    $desc_to_cash = $CashSum . " (" . $TypeCash .") \n" . "æ325691çƒ©h" . $DescribeOfCash;
 
                     $date_time = date("Y-m-d H:i:s");
 

@@ -100,7 +100,7 @@ if ($ArrResult === false) {
 
 
 
-        <a id="ArchiveReceived" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
+        <a id="ArchiveReceived" href="ReceivedPost/ReceivedPostInterface.php" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
             <span class="SendLetter">Прийняти пошту <sup id="FROMT" style="background-color: darkred;
     border-radius: 100px; color: white; width: 40px; height: 40px; margin-right: 10px; display: flex; justify-content: center; align-items: center;"></sup></span>

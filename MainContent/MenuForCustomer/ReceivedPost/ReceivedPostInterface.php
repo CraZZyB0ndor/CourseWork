@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 $serverName = "localhost";
 $userName = "root";
 $password = "";
@@ -47,6 +49,10 @@ if ( isset($_POST['confirm']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлене до архіву';</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
+    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_POST['ID'];
+
+    //mysqli_query($connectMySQL, $query_confirm);
+
 }
 
 if ( isset($_POST['disregard']) ) {
@@ -54,9 +60,28 @@ if ( isset($_POST['disregard']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву'</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
+    echo "<script>alert('". $_GET['ID'] ."');</script>";
+
+    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_POST['ID'];
+
+    //mysqli_query($connectMySQL, $query_confirm);
+
 }
 
-$ResultPosts = DisplayPosts($connectMySQL);
+$ResultPosts = DisplayPosts($connectMySQL, "");
+
+if (isset($_POST['Search'])) {
+
+    //U.`SecondName`, U.`FirstName`, U.`Patronymic`, U.`E-mail` S.`DateOfReceipt` P.`TypePost`
+
+
+    $ResultPosts = DisplayPosts($connectMySQL, "AND (U.`SecondName` LIKE '%". $_POST['SearchInput'] ."%' OR U.`FirstName` LIKE '%". $_POST['SearchInput'] ."%' OR 
+    U.`Patronymic` LIKE '%". $_POST['SearchInput'] ."%' OR U.`E-mail` LIKE '%". $_POST['SearchInput'] ."%' OR S.`DateOfReceipt` LIKE '%". $_POST['SearchInput'] ."%' OR
+    P.`TypePost` LIKE '%". $_POST['SearchInput'] ."%')");
+
+    $_SESSION['SearchInput'] = $_POST['SearchInput'];
+
+}
 
 ?>
 
@@ -77,19 +102,256 @@ $ResultPosts = DisplayPosts($connectMySQL);
             <div id="SearchPost">
 
                 <p>Пошук:</p>
-                <input type="text" id="InputSearchPost">
-                <img src="Images/search.png" alt="Search">
+                <input type="text" id="InputSearchPost" name="SearchInput">
+                <div>
+                    <img src="Images/delete.png" onclick="document.getElementById('InputSearchPost').value = '';">
+                </div>
+                <input type="submit" value="🔍" alt="Search" title="Пошук" name="Search">
 
             </div>
 
+<?php
+
+if (key_exists('SearchInput', $_SESSION)) {
+
+    echo "<script>document.getElementById('InputSearchPost').value='" . $_SESSION['SearchInput'] . "';</script>";
+}
+
+?>
 
             <div id="ControlPosts">
 
 
                 <div id="SortFilter">
 
-            <img src="Images/sort.png" title="Сортування">
-            <div></div>
+            <img src="Images/sort.png" title="Сортування" onclick="$('.SortMenu').toggleClass('SortMenuDisplay');">
+
+            <div class="SortMenu">
+
+                <div>
+
+                    <p>СОРТУВАТИ ПО:</p>
+
+                    <div>
+
+                        <div>
+                            <input id="SortType" type="submit" name="TypeS" value="ТИП">
+                            <img class="SortIMG" src="Images/x-button.png"
+                                 onclick="
+
+            document.getElementById('SortType').style.cursor = 'pointer';
+
+            setTimeout(Display23, 400);
+
+            WidthHeight('From');
+
+            document.getElementsByClassName('SortIMG')[0].style.display = 'none';
+
+                                    ">
+                        </div>
+
+                        <div>
+                            <input id="SortSender" type="submit" name="SenderS" value="АДРЕСАТ">
+                            <img class="SortIMG" src="Images/x-button.png"
+                                 onclick="
+
+            document.getElementById('SortSender').style.cursor = 'pointer';
+
+            setTimeout(Display13, 400);
+
+            WidthHeight('From');
+
+            document.getElementsByClassName('SortIMG')[1].style.display = 'none';
+
+                                 ">
+                        </div>
+
+                        <div>
+                            <input id="SortTime" type="submit" name="TimeS" value="ЧАС">
+                            <img class="SortIMG" src="Images/x-button.png"
+                                 onclick="
+
+            document.getElementById('SortTime').style.cursor = 'pointer';
+
+            setTimeout(Display12, 400);
+
+            WidthHeight('From');
+
+            document.getElementsByClassName('SortIMG')[2].style.display = 'none';
+
+                                ">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+                    <script>
+
+                        function WidthHeight(condition) {
+
+                            if (condition === 'To') {
+
+                                document.getElementsByClassName('SortMenu')[0].style.height = '75px';
+                                document.getElementById('SortType').style.width = '130px';
+                                document.getElementById('SortSender').style.width = '130px';
+                                document.getElementById('SortTime').style.width = '130px';
+
+                            } else if (condition === 'From') {
+
+                                document.getElementsByClassName('SortMenu')[0].style.height = '150px';
+                                document.getElementById('SortType').style.width = '160px';
+                                document.getElementById('SortSender').style.width = '160px';
+                                document.getElementById('SortTime').style.width = '160px';
+
+                            }
+
+                        }
+
+
+                        function SortType(condition) {
+
+
+                            if (condition === 'Along') {
+
+                                document.getElementById('SortType').style.cursor = 'default';
+
+
+                                document.getElementById('SortSender').style.opacity = '0';
+                                document.getElementById('SortTime').style.opacity = '0';
+
+                                setTimeout(Displayy23, 400);
+
+                                WidthHeight('To');
+
+                                document.getElementsByClassName('SortIMG')[0].style.display = 'flex';
+
+                            }
+
+
+                        }
+
+
+                        function Display23() {
+
+                            document.getElementById('SortSender').style.display = 'flex';
+                            document.getElementById('SortTime').style.display = 'flex';
+
+                            document.getElementById('SortSender').style.opacity = '1';
+                            document.getElementById('SortTime').style.opacity = '1';
+                        }
+
+                        function Displayy23() {
+
+                            document.getElementById('SortSender').style.display = 'none';
+                            document.getElementById('SortTime').style.display = 'none';
+
+                        }
+
+                        function SortSender(condition) {
+
+
+                            if (condition === 'Along') {
+
+                                document.getElementById('SortSender').style.cursor = 'default';
+
+                                document.getElementById('SortType').style.opacity = '0';
+                                document.getElementById('SortTime').style.opacity = '0';
+
+                                setTimeout(Displayy13, 100);
+
+                                WidthHeight('To');
+
+                                document.getElementsByClassName('SortIMG')[1].style.display = 'flex';
+
+                            }
+
+                        }
+
+                        function Display13() {
+
+                            document.getElementById('SortType').style.display = 'flex';
+                            document.getElementById('SortTime').style.display = 'flex';
+
+                            document.getElementById('SortType').style.opacity = '1';
+                            document.getElementById('SortTime').style.opacity = '1';
+
+                        }
+
+                        function Displayy13() {
+
+                            document.getElementById('SortType').style.display = 'none';
+                            document.getElementById('SortTime').style.display = 'none';
+
+                        }
+
+                        function SortTime(condition) {
+
+                            if (condition === 'Along') {
+
+                                document.getElementById('SortTime').style.cursor = 'default';
+
+                                document.getElementById('SortType').style.opacity = '0';
+                                document.getElementById('SortSender').style.opacity = '0';
+
+                                setTimeout(Displayy12, 100);
+
+                                WidthHeight('To');
+
+                                document.getElementsByClassName('SortIMG')[2].style.display = 'flex';
+
+                            }
+
+                        }
+
+                        function Display12() {
+
+                            document.getElementById('SortType').style.display = 'flex';
+                            document.getElementById('SortSender').style.display = 'flex';
+
+                            document.getElementById('SortType').style.opacity = '1';
+                            document.getElementById('SortSender').style.opacity = '1';
+
+                        }
+
+                        function Displayy12() {
+
+                            document.getElementById('SortType').style.display = 'none';
+                            document.getElementById('SortSender').style.display = 'none';
+                        }
+
+
+                    </script>
+
+                    <?php
+
+                    if (isset($_POST['TypeS'])) {
+
+                        echo "<script>SortType('Along');</script>";
+
+                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY P.`TypePost`");
+
+                    }
+
+                    if (isset($_POST['SenderS'])) {
+
+                        echo "<script>SortSender('Along');</script>";
+
+                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY U.`SecondName`");
+
+                    }
+
+                    if (isset($_POST['TimeS'])) {
+
+                        echo "<script>SortTime('Along');</script>";
+
+                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY S.`DateOfReceipt`");
+
+                    }
+
+                    ?>
 
             <img src="Images/filter.png" title="Фільтрація">
             <div></div>
@@ -128,7 +390,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
             if ( gettype($ResultPosts) == "string" ) {
 
-                echo "<p>".$ResultPosts."</p>";
+                echo "<p id='NonePost'>".$ResultPosts."</p>";
 
             } else if ( gettype($ResultPosts) == "object" ) {
 
@@ -139,13 +401,24 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
                     if ($arr_select_some_posts != NULL) {
 
+                        $arrayDesc[0] = '';
+
+                        if ($arr_select_some_posts[7] == 'Лист') {
+
+                            $str = (string) $arr_select_some_posts[4];
+                            $arrayDesc = explode('æ325691çƒ©h', $str, strlen($str)-11);
+
+                            $arrayDesc[0] = " (" . $arrayDesc[0] . ") ";
+                        }
+
+                        $ID = $arr_select_some_posts[6];
 
                         echo "<div class=\"PostElement\">
 
                 <div>
 
                     <label class=\"checkbox\">
-                        <input type=\"checkbox\" />
+                        <input type=\"checkbox\" name='C". $ID ."'/>
                         <div class=\"checkbox__text\"></div>
                     </label>
 
@@ -155,7 +428,7 @@ $ResultPosts = DisplayPosts($connectMySQL);
 
                 <div>
 
-                    <a class=\"CheckPost\" title=\"Відкрити повідомлення\" href='ViewPost.php?NumDiv=" . "$arr_select_some_posts[6]'".">
+                    <a class=\"CheckPost\" title=\"Відкрити повідомлення\" href='ViewPost.php?NumDiv=" . "$ID'".">
                         
                         <div>
                             <p style=\"font-weight: bold; margin-right: 15px;\">Від: </p>
@@ -166,8 +439,8 @@ $ResultPosts = DisplayPosts($connectMySQL);
                         </div>
 
                         <div>
-                            <p style=\"font-weight: bold; margin-right: 15px;\">Тема:</p>
-                            <p style='font-style: italic;'>$arr_select_some_posts[4]</p>
+                            <p style=\"font-weight: bold; margin-right: 15px;\">Тип:</p>
+                            <p style='font-style: italic;'> " . $arr_select_some_posts[7] . $arrayDesc[0] . "</p>
                         </div>
 
                         <div>
@@ -180,11 +453,13 @@ $ResultPosts = DisplayPosts($connectMySQL);
                     <div>
 
                         <input type=\"submit\" value=\"ПРИЙНЯТИ\" name='confirm'>
-                        <input type=\"submit\" value=\"ВІДМОВИТИСЯ\" name='disregard'>
+                        <input type=\"submit\" value=\"ВІДМОВИТИСЯ\" name='disregard' onclick='window.location.href = \"http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php?ID=". $ID ."\"'" . ">                  
 
                     </div>
 
                 </div>
+                
+                
 
             </div> ";
 
