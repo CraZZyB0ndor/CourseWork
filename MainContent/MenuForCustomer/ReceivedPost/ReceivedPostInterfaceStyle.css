@@ -10,6 +10,11 @@ a {
     color: #000;
 }
 
+body   {
+
+    overflow: hidden;
+}
+
 #RestartIMG {
 
     width: 70px;
@@ -246,9 +251,21 @@ a {
 #RefreshHelp>input {
 
     width: 50px;
-    height: 50px;
+    height: 70px;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: flex-start;
 
     margin-left: 20px;
+    margin-bottom: 20px;
+
+    font-size: 60px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+    outline: none;
 
     transition: opacity 0.3s;
 
@@ -546,7 +563,8 @@ a {
 
 #Posts {
 
-    overflow: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #NonePost {
@@ -576,7 +594,7 @@ a {
 
     z-index: 1;
 
-    top: 19%;
+    top: 20%;
     left: 36.25%;
 }
 
@@ -677,3 +695,220 @@ a {
     background-color: #148F77;
 }
 
+.FilterMenu {
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    position: absolute;
+
+    background-color: white;
+    border: solid black 2px;
+
+    transition: 0.5s;
+
+    z-index: 1;
+
+    width: 250px;
+    height: 173px;
+
+    top: 20%;
+    left: 38.40%;
+
+    font-weight: bold;
+    font-family: 'Russo One', sans-serif;
+    text-transform: uppercase;
+
+}
+
+.FilterMenu:before {
+    content: "";
+    width: 0;
+    height: 0;
+    right: 45%;
+    bottom: 100%;
+    position: absolute;
+    border-right: 13px solid transparent;
+    border-bottom: 26px solid black;
+    border-left: 13px solid transparent;
+}
+
+#TypePost {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    align-self: flex-start;
+
+    font-weight: lighter;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+#TypePost>p {
+
+    margin-right: 10px;
+    text-transform: capitalize;
+
+}
+
+#TypePost>select {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    outline: none;
+
+    width: 190px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#FilterButton {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 15px;
+
+    background-color: #1ABC9C;
+
+    width: 99%;
+
+    cursor: pointer;
+
+    border: solid black 2px;
+    transition: 0.5s;
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 30px;
+
+    font-weight: bold;
+
+    outline: none;
+
+    text-transform: uppercase;
+}
+
+#FilterButton:hover {
+
+    background-color: #148F77;
+}
+
+#DateError {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 20px;
+
+    transition: 0.5s;
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    font-weight: bold;
+
+    text-transform: uppercase;
+
+    color: #AD0B02;
+
+}
+
+#TimeReceived {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    align-self: flex-start;
+
+    font-weight: lighter;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+#TimeReceived>p {
+
+    margin-right: 10px;
+    text-transform: capitalize;
+
+}
+
+#TimeReceived>select {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    outline: none;
+
+    width: 190px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+}
+
+#DateBetween {
+
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    margin-top: 10px;
+
+    transition: 0.5s;
+}
+
+#DateBetween>div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    width: 100%;
+
+    margin-left: 5px;
+}
+
+#DateBetween>div>p {
+
+    margin-right: 10px;
+    text-transform: capitalize;
+}
+
+#DateBetween>div>input {
+
+    width: 200px;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    border: solid 2px black;
+
+    margin-top: 2px;
+}
+
+.FilterMenuDisplay {
+
+    display: flex;
+}

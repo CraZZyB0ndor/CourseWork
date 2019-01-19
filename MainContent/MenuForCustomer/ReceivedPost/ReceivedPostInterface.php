@@ -11,7 +11,7 @@ $connectMySQL = new mysqli($serverName, $userName, $password, $nameDataBase);
 
 mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
-include 'SelectInfoAboutPost.php';
+include 'ProcessingSortAndFilter.php';
 
 $modal_text = "";
 
@@ -29,6 +29,7 @@ $modal_text = "";
     <link rel="stylesheet" href="ReceivedPostInterfaceStyle.css">
     <title>ОТРИМАТИ ПОШТУ</title>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="FilterJS.js"></script>
 
 </head>
 
@@ -74,10 +75,11 @@ if (isset($_POST['Search'])) {
 
     //U.`SecondName`, U.`FirstName`, U.`Patronymic`, U.`E-mail` S.`DateOfReceipt` P.`TypePost`
 
-
-    $ResultPosts = DisplayPosts($connectMySQL, "AND (U.`SecondName` LIKE '%". $_POST['SearchInput'] ."%' OR U.`FirstName` LIKE '%". $_POST['SearchInput'] ."%' OR 
+    $_SESSION['search'] = "AND (U.`SecondName` LIKE '%". $_POST['SearchInput'] ."%' OR U.`FirstName` LIKE '%". $_POST['SearchInput'] ."%' OR 
     U.`Patronymic` LIKE '%". $_POST['SearchInput'] ."%' OR U.`E-mail` LIKE '%". $_POST['SearchInput'] ."%' OR S.`DateOfReceipt` LIKE '%". $_POST['SearchInput'] ."%' OR
-    P.`TypePost` LIKE '%". $_POST['SearchInput'] ."%')");
+    P.`TypePost` LIKE '%". $_POST['SearchInput'] ."%')";
+
+    $ResultPosts = ProcessingPostData($connectMySQL);
 
     $_SESSION['SearchInput'] = $_POST['SearchInput'];
 
@@ -91,7 +93,7 @@ if (isset($_POST['Search'])) {
 
 
 
-    <a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/CustomerMenuPHP.php"><img src="Images/restart.png" alt="back" id="RestartIMG" title="ГОЛОВНЕ МЕНЮ"></a>
+    <a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php"><img src="Images/restart.png" alt="back" id="RestartIMG" title="ГОЛОВНЕ МЕНЮ"></a>
 
     <p id="HeaderDocument">ПРИЙНЯТИ ПОШТУ</p>
 
@@ -110,23 +112,14 @@ if (isset($_POST['Search'])) {
 
             </div>
 
-<?php
-
-if (key_exists('SearchInput', $_SESSION)) {
-
-    echo "<script>document.getElementById('InputSearchPost').value='" . $_SESSION['SearchInput'] . "';</script>";
-}
-
-?>
-
             <div id="ControlPosts">
 
 
                 <div id="SortFilter">
 
-            <img src="Images/sort.png" title="Сортування" onclick="$('.SortMenu').toggleClass('SortMenuDisplay');">
+            <img src="Images/sort.png" title="Сортування" onclick="TrueOpenWindow('Sort');">
 
-            <div class="SortMenu">
+            <div class="SortMenu" id="SortMenuID">
 
                 <div>
 
@@ -329,32 +322,220 @@ if (key_exists('SearchInput', $_SESSION)) {
 
                     if (isset($_POST['TypeS'])) {
 
-                        echo "<script>SortType('Along');</script>";
+                        //echo "<script>SortType('Along');</script>";
 
-                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY P.`TypePost`");
+                        $_SESSION['order'] = "ORDER BY P.`TypePost`";
+
+                        $ResultPosts = ProcessingPostData($connectMySQL);
+
+                        $_SESSION['TypeS'] = "<script>SortType('Along');</script>";
 
                     }
 
                     if (isset($_POST['SenderS'])) {
 
-                        echo "<script>SortSender('Along');</script>";
+                        //echo "<script>SortSender('Along');</script>";
 
-                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY U.`SecondName`");
+                        $_SESSION['order'] = "ORDER BY U.`SecondName`";
+
+                        $ResultPosts = ProcessingPostData($connectMySQL);
+
+                        $_SESSION['TypeS'] = "<script>SortSender('Along');</script>";
 
                     }
 
                     if (isset($_POST['TimeS'])) {
 
-                        echo "<script>SortTime('Along');</script>";
+                        //echo "<script>SortTime('Along');</script>";
 
-                        $ResultPosts = DisplayPosts($connectMySQL, "ORDER BY S.`DateOfReceipt`");
+                        $_SESSION['order'] = "ORDER BY S.`DateOfReceipt`";
+
+                        $ResultPosts = ProcessingPostData($connectMySQL);
+
+                        $_SESSION['TypeS'] = "<script>SortTime('Along');</script>";
+                    }
+
+                    //
+
+                    if (isset($_POST['RefreshPost'])) {
+
+                        if (key_exists('SearchInput', $_SESSION)) {
+
+                            unset($_SESSION['SearchInput']);
+                        }
+
+                        if (key_exists('TypeS', $_SESSION)) {
+
+                            unset($_SESSION['TypeS']);
+
+                        }
+
+                        if (key_exists('FilterS', $_SESSION)) {
+
+                            unset($_SESSION['FilterS']);
+
+                        }
+
+                    }
+
+
+                    ?>
+
+            <img src="Images/filter.png" title="Фільтрація" onclick="TrueOpenWindow('Filter');">
+
+            <div class="FilterMenu" id="FilterCheckerClass">
+
+                <p>Фільтрувати по:</p>
+
+                <div id="TypePost">
+
+                    <p>Тип: </p>
+
+                    <select name="FTPost" id="TypeSendID">
+
+                        <option value="Всі типи пошти">Всі типи пошти</option>
+                        <option value="Лист" id="LetterS">Лист</option>
+                        <option value="Посилка">Посилка</option>
+                        <option value="Гроші">Гроші</option>
+
+                    </select>
+
+                </div>
+
+
+                <div id="TimeReceived">
+
+                    <p>Час: </p>
+
+                    <select name="FTTime" id="TimeSendID" onchange="SelectTab();">
+
+                        <option value="Весь час" id="AllTime">Весь час</option>
+                        <option value="С [--] ДО [--]" id="CertainTime">С [--] ДО [--]</option>
+
+                    </select>
+
+                </div>
+
+                <div id="DateBetween">
+
+                    <div>
+                        <p>З:</p>
+                        <input name="FromTime" id="FromDate" type="datetime-local" min="2018-12-01T00:00" onchange="ValidationFromDate();">
+                    </div>
+
+                    <div>
+                        <p>ПО:</p>
+                        <input name="ToTime" id="ToDate" type="datetime-local" onchange="ValidationFromDate();">
+                    </div>
+
+
+                </div>
+
+                <input type="submit" id="FilterButton" name="ApplyFilter" value="Фільтрувати">
+                <p id="DateError">Вкажіть дві дати правильно</p>
+
+            </div>
+
+
+                    <?php
+
+
+                    if (isset($_POST['ApplyFilter'])) {
+
+                        if ($_POST['FTPost'] !== 'Всі типи пошти') {
+
+                            if ($_POST['FTTime'] !== 'Весь час') {
+
+                                $query_time_type = "AND P.`TypePost` = '". $_POST['FTPost'] ."' AND S.`DateOfReceipt` BETWEEN '". $_POST['FromTime'] ."' AND '". $_POST['ToTime'] ."'";
+
+                                $_SESSION['filter'] = $query_time_type;
+
+                                $ResultPosts = ProcessingPostData($connectMySQL);
+
+                                $_SESSION['FilterS'] = "<script>
+
+                                        $(\"#TypeSendID\").val('". $_POST['FTPost'] ."').change();
+                                        $(\"#TimeSendID\").val('". $_POST['FTTime'] ."').change();
+                                        
+                                        document.getElementById('FromDate').value = '". $_POST['FromTime'] ."';
+                                        document.getElementById('ToDate').value = '". $_POST['ToTime'] ."';
+                                        
+                                      SelectTab();
+                                        
+                                      </script>";
+
+
+                            } else {
+
+                                $query_type = "AND P.`TypePost` = '". $_POST['FTPost'] ."'";
+
+                                $_SESSION['filter'] = $query_type;
+
+                                $ResultPosts = ProcessingPostData($connectMySQL);
+
+                                $_SESSION['FilterS'] = "<script>$(\"#TypeSendID\").val('". $_POST['FTPost'] ."').change();</script>";
+                            }
+
+                        } else {
+
+                            if ($_POST['FTTime'] !== 'Весь час') {
+
+                                $query_time = "AND S.`DateOfReceipt` BETWEEN '". $_POST['FromTime'] ."' AND '". $_POST['ToTime'] ."'";
+
+                                $_SESSION['filter'] = $query_time;
+
+                                $ResultPosts = ProcessingPostData($connectMySQL);
+
+                                $_SESSION['FilterS'] = "<script>
+
+                                        $(\"#TimeSendID\").val('". $_POST['FTTime'] ."').change();
+                                        
+                                        document.getElementById('FromDate').value = '". $_POST['FromTime'] ."';
+                                        document.getElementById('ToDate').value = '". $_POST['ToTime'] ."';
+                                        
+                                      SelectTab();
+                                        
+                                      </script>";
+
+                            } else {
+
+                                unset($_SESSION['filter']);
+                                unset($_SESSION['FilterS']);
+
+                                $ResultPosts = ProcessingPostData($connectMySQL);
+
+                            }
+
+                        }
+
 
                     }
 
                     ?>
 
-            <img src="Images/filter.png" title="Фільтрація">
-            <div></div>
+
+
+                    <?php
+
+                    if (key_exists('SearchInput', $_SESSION)) {
+
+                        echo "<script>document.getElementById('InputSearchPost').value='" . $_SESSION['SearchInput'] . "';</script>";
+                    }
+
+                    if (key_exists('TypeS', $_SESSION)) {
+
+                        echo $_SESSION['TypeS'];
+
+                    }
+
+                    if (key_exists('FilterS', $_SESSION)) {
+
+                        echo $_SESSION['FilterS'];
+
+                    }
+
+                    ?>
+
 
                 </div>
 
@@ -370,7 +551,7 @@ if (key_exists('SearchInput', $_SESSION)) {
                 <div id="RefreshHelp">
 
 
-            <input type="image" src="Images/refresh.png" title="Оновити пошту" style="outline: none;">
+            <input type="submit" src="Images/refresh.png" title="Оновити пошту" value="↺" name="RefreshPost">
 
             <img src="Images/question.png" alt="help" title="Допомога">
 
