@@ -1,0 +1,480 @@
+* {
+
+    padding: 0;
+    margin: 0;
+}
+
+body>p {
+
+    font-family: 'Russo One', sans-serif;
+    font-size: 35px;
+
+    text-align: center;
+    margin-top: 15px;
+}
+
+body>a>img {
+
+    width: 70px;
+    height: 70px;
+
+    position: absolute;
+
+    top: 5px;
+    left: 5px;
+
+    transition: 0.3s;
+
+    cursor: pointer;
+}
+
+body>a>img:hover {
+
+    opacity: 0.5 ;
+}
+
+main {
+
+    overflow: hidden;
+}
+
+main, main>div {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+#BlockOfProfIMG {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#BlockOfProfIMG>input {
+
+    text-transform: uppercase;
+}
+
+#UserImage {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-self: center;
+    align-self: center;
+
+    margin-top: 10px;
+}
+
+#UserImage>img {
+
+    display: flex;
+
+    justify-self: center;
+    align-self: center;
+
+    width: 100px;
+    height: 100px;
+
+    transition: 0.5s;
+}
+
+#UserImage>img:hover {
+
+    height: 130px;
+    width: 130px;
+}
+
+#BlockOfProfIMG>input {
+
+    margin-top: 20px;
+
+    cursor: pointer;
+
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 5px;
+
+    background-color: #138D75;
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 15px;
+    color: white;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+#BlockOfProfIMG>input:hover {
+
+    background-color: #117A65;
+}
+
+td>input {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    outline: none;
+
+    margin-bottom: 4px;
+
+    border: solid black 1px;
+
+    display: none;
+
+}
+
+td>p {
+
+    color: darkred;
+}
+
+td>div {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#BlockOfDataUser {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 50px;
+}
+
+table {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+
+}
+
+table>tr {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+tr {
+
+    z-index: 1;
+}
+
+.NameCell {
+
+    font-weight: bold;
+    text-transform: uppercase;
+
+}
+
+.ImageEditData>img {
+
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+
+    transition: 0.5s;
+}
+
+
+.ImageEditData>img:hover {
+
+    width: 40px;
+    height: 40px;
+
+    padding-bottom: 70px;
+
+}
+
+.ImageConfirmEditData>img {
+
+    width: 40px;
+    height: 40px;
+
+    transition: 0.3s;
+
+    opacity: 0;
+}
+
+#backgroundForModalWindow {
+
+    display: none;
+    justify-content: center;
+
+    position: absolute;
+
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    transition: 0.5s;
+
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+
+#ModalWindowForEditUserData {
+
+    display: flex;
+    flex-direction: row;
+
+    justify-content: center;
+    align-items: flex-end;
+
+    position: absolute;
+
+    margin-top: 15%;
+
+    width: 1000px;
+    height: 200px;
+
+    transition: 0.5s;
+
+    background-image: url("Images/apple_blur.jpg");
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#ModalWindowForEditUserData>input {
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+    font-size: 25px;
+
+    outline: none;
+
+    border: 2px solid black;
+
+    width: 200px;
+
+    cursor: pointer;
+}
+
+#ModalWindowForEditUserData>input:nth-child(1) {
+
+    margin-right: 10px;
+    background-color: #00BA74;
+
+    visibility: hidden;
+
+}
+
+#ModalWindowForEditUserData>input:nth-child(1):hover {
+
+    background-color: #009D62;
+
+}
+
+#ModalWindowForEditUserData>input:nth-child(2) {
+
+    margin-left: 10px;
+    background-color: #DF0B00;
+
+}
+
+#ModalWindowForEditUserData>input:nth-child(2):hover {
+
+    background-color: #AD0B02;
+
+}
+
+#SurnameStyleID {
+
+    left: 630px
+}
+
+#SurnameID {
+
+    width: 150px;
+}
+
+#NameOfEditRow {
+
+    position: absolute;
+    visibility: hidden;
+}
+
+.UserDataFromPHP {
+
+    display: table-cell;
+    vertical-align: inherit;
+}
+
+.DeleteContentImage {
+
+    position: absolute;
+
+    top: 31px;
+    right: 82px;
+
+    width: 20px;
+    height: 20px;
+    
+    transition: 0.3s;
+
+    cursor: pointer;
+
+    display: none;
+}
+
+.DeleteContentImage:hover {
+
+    opacity: 0.5;
+}
+
+.SwitchChange {
+
+    width: 15px;
+    height: 15px;
+
+    margin-left: 5px;
+    margin-bottom: 10px;
+
+    display: none;
+}
+
+
+.HelpSwitchChange
+{
+    position: relative;
+    display: inline-block;
+    text-decoration: none;
+    //text-transform: uppercase;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+
+.ToolipHelpSwitchChange
+{
+    width: 200px;
+    word-wrap: break-word;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: center;
+    bottom: 35px;
+    left: 20px;
+
+}
+
+.HelpSwitchChange .ToolipHelpSwitchChange
+{
+    visibility: hidden;
+    background-color: black;
+    color: #fff;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.HelpSwitchChange .ToolipHelpSwitchChange::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 10px;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: red transparent transparent transparent;
+}
+
+
+.HelpSwitchChange:hover .ToolipHelpSwitchChange
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+#HelpIMG {
+
+    width: 55px;
+    height: 55px;
+
+    border: solid black 3px;
+    border-radius: 100px;
+
+    margin-left: 20px;
+
+    padding: 5px;
+
+    cursor: pointer;
+
+    position: absolute;
+
+    right: 5px;
+    top: 5px;
+
+    transition: 0.3s;
+}
+
+#HelpIMG:hover {
+
+    opacity: 0.5;
+}
+
+#ChangePassword {
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    border: solid 1px black;
+
+    border-radius: 5px;
+    width: 250px;
+
+    background-color: black;
+    color: white;
+
+    outline: none;
+
+    text-transform: uppercase;
+}
+
+#SaveButton {
+
+    margin-top: 30px;
+
+    font-size: 30px;
+    font-weight: bold;
+
+    font-family: 'Russo One', sans-serif;
+
+    border: solid 2px black;
+
+    width: 200px;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    outline: none;
+
+    background-color: #1ABC9C;
+}
+
+#SaveButton:hover {
+
+    background-color: #117864;
+}

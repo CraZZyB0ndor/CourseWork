@@ -46,7 +46,7 @@ $TypeOfDisplay = 'none';
     <link href="https://fonts.googleapis.com/css?family=Cuprum" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Russo+One" rel="stylesheet">
     <link rel="stylesheet" href="StyleForSendMailCustomer.css">
-    <title>Відправити пошту</title>
+    <title>ВІДПРАВИТИ ПОШТУ</title>
     <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 </head>
 <body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">

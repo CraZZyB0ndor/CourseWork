@@ -50,7 +50,7 @@ if ( isset($_POST['confirm']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлене до архіву';</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
-    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_POST['ID'];
+    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_POST['confirm'];
 
     //mysqli_query($connectMySQL, $query_confirm);
 
@@ -61,9 +61,7 @@ if ( isset($_POST['disregard']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву'</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
-    echo "<script>alert('". $_GET['ID'] ."');</script>";
-
-    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_POST['ID'];
+    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_POST['disregard];
 
     //mysqli_query($connectMySQL, $query_confirm);
 
@@ -82,6 +80,102 @@ if (isset($_POST['Search'])) {
     $ResultPosts = ProcessingPostData($connectMySQL);
 
     $_SESSION['SearchInput'] = $_POST['SearchInput'];
+
+}
+
+if ( isset($_POST['ReceivedCheckBox']) ) {
+
+
+    $query_update_row = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` IN (";
+
+    if ( !empty($_POST['SpecificUser']) ) {
+
+        $select_post = $_POST['SpecificUser'];
+
+        $count_check_post = count($select_post);
+
+
+
+        for ($i = 0; $i < $count_check_post; $i++) {
+
+            $query_update_row .= ' ' . $select_post[$i] . ',';
+
+        }
+
+
+        $query_update_row = substr($query_update_row, 0, strlen($query_update_row) - 1) . ' )';
+
+        if ($count_check_post > 1) {
+
+            echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлені до архіву';</script>";
+            echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        } else {
+
+            echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлено до архіву';</script>";
+            echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        }
+
+        //echo "$query_update_row";
+
+        mysqli_query($connectMySQL, $query_update_row);
+
+        $ResultPosts = ProcessingPostData($connectMySQL);
+
+    } else {
+
+        echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви не вибрали жодного повідомлення!';</script>";
+        echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+    }
+
+}
+
+if ( isset($_POST['DisregardCheckBox']) ) {
+
+    $query_update_row = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` IN (";
+
+    if ( !empty($_POST['SpecificUser']) ) {
+
+        $select_post = $_POST['SpecificUser'];
+
+        $count_check_post = count($select_post);
+
+
+
+        for ($i = 0; $i < $count_check_post; $i++) {
+
+            $query_update_row .= ' ' . $select_post[$i] . ',';
+
+        }
+
+        $query_update_row = substr($query_update_row, 0, strlen($query_update_row) - 1) . ' )';
+
+        if ($count_check_post > 1) {
+
+            echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлені до архіву';</script>";
+            echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        } else {
+
+            echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву';</script>";
+            echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+        }
+
+        //echo "$query_update_row";
+
+        mysqli_query($connectMySQL, $query_update_row);
+
+        $ResultPosts = ProcessingPostData($connectMySQL);
+
+    } else {
+
+        echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви не вибрали жодного повідомлення!';</script>";
+        echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
+
+    }
 
 }
 
@@ -542,8 +636,8 @@ if (isset($_POST['Search'])) {
 
                 <div id="ActionPost">
 
-            <input type="submit" value="ПРИЙНЯТИ">
-            <input type="submit" value="ВІДМОВИТИСЯ">
+            <input type="submit" value="ПРИЙНЯТИ" name="ReceivedCheckBox">
+            <input type="submit" value="ВІДМОВИТИСЯ" name="DisregardCheckBox">
 
                 </div>
 
@@ -599,7 +693,7 @@ if (isset($_POST['Search'])) {
                 <div>
 
                     <label class=\"checkbox\">
-                        <input type=\"checkbox\" name='C". $ID ."'/>
+                        <input type=\"checkbox\" name='SpecificUser[]' value='". $ID ."'/>
                         <div class=\"checkbox__text\"></div>
                     </label>
 
@@ -633,8 +727,8 @@ if (isset($_POST['Search'])) {
 
                     <div>
 
-                        <input type=\"submit\" value=\"ПРИЙНЯТИ\" name='confirm'>
-                        <input type=\"submit\" value=\"ВІДМОВИТИСЯ\" name='disregard' onclick='window.location.href = \"http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php?ID=". $ID ."\"'" . ">                  
+                        <button type=\"submit\" value=\"$ID\" name='confirm'>ПРИЙНЯТИ</button>
+                        <button type=\"submit\" value=\"$ID\" name='disregard'>ВІДМОВИТИСЯ</button>                 
 
                     </div>
 

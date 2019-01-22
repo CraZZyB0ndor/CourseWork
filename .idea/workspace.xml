@@ -33,72 +33,67 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
+        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterface.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="784">
-              <caret line="102" column="76" selection-start-line="102" selection-start-column="76" selection-end-line="102" selection-end-column="76" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3514">
-              <caret line="357" column="22" lean-forward="true" selection-start-line="357" selection-start-column="22" selection-end-line="357" selection-end-column="22" />
+            <state relative-caret-position="493">
+              <caret line="344" column="97" selection-start-line="344" selection-start-column="97" selection-end-line="344" selection-end-column="97" />
               <folding>
                 <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#7405#7684#0#HTML" />
-                <element signature="e#7712#7859#0#HTML" />
-                <element signature="e#7900#8331#0#HTML" />
-                <element signature="e#8358#8634#0#HTML" />
-                <element signature="e#8662#8807#0#HTML" />
-                <element signature="e#8842#9272#0#HTML" />
-                <element signature="e#9299#9579#0#HTML" />
-                <element signature="e#9607#9753#0#HTML" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#2;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#8;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-4345">
-              <caret line="571" column="41" lean-forward="true" selection-start-line="571" selection-start-column="41" selection-end-line="571" selection-end-column="41" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php">
+        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterfaceStyle.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" selection-start-line="22" selection-end-line="22" />
+            <state relative-caret-position="695">
+              <caret line="469" column="17" selection-start-line="469" selection-start-column="17" selection-end-line="469" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php">
+        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditScript.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="1" selection-start-line="1" selection-end-line="16" selection-end-column="1" />
+            <state relative-caret-position="697">
+              <caret line="477" column="87" selection-start-line="477" selection-start-column="87" selection-end-line="477" selection-end-column="87" />
               <folding>
-                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+                <element signature="n#!!block;n#FieldFST#0" />
+                <element signature="n#!!block;n#Field4#0" />
+                <element signature="n#!!block;n#Field5#0" />
+                <element signature="n#!!block;n#Field6#0" />
+                <element signature="n#!!block;n#Field7#0" />
+                <element signature="n#!!block;n#Field8#0" />
               </folding>
             </state>
           </provider>
@@ -120,6 +115,7 @@
       <find>pointer</find>
       <find>000</find>
       <find>hidden</find>
+      <find>flex-end</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -148,7 +144,6 @@
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/ClearEnterInfo.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/DeleteCookies.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPostStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ConfirmOrNOT.php" />
@@ -159,10 +154,15 @@
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToEmail.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToCash.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/GetDataFromDB.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditScript.js" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterface.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterfaceStyle.css" />
       </list>
     </option>
   </component>
@@ -209,7 +209,29 @@
               <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
               <item name="MainContent" type="462c0819:PsiDirectoryNode" />
               <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
+              <item name="EditPROFILE" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
+              <item name="MainContent" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
+              <item name="EditPROFILE" type="462c0819:PsiDirectoryNode" />
+              <item name="Images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
+              <item name="MainContent" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
               <item name="ReceivedPost" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
+              <item name="MainContent" type="462c0819:PsiDirectoryNode" />
+              <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
+              <item name="SendPost" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -230,6 +252,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/Images" />
       <recent name="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images" />
       <recent name="$PROJECT_DIR$/MainContent/MenuForCustomer/Images" />
       <recent name="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/Images" />
@@ -283,18 +306,18 @@
       <workItem from="1544280337211" duration="1732000" />
       <workItem from="1544352900151" duration="818000" />
       <workItem from="1544356261413" duration="29085000" />
-      <workItem from="1546119932486" duration="161504000" />
+      <workItem from="1546119932486" duration="203851000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="372418000" />
+    <option name="totallyTimeSpent" value="414765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2967033" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2967033" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -340,42 +363,11 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Cinema-theater/Basic page/BasicPage.html" />
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/Images/cancel (1).png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../FinishedWork/ТВ/Программа/L3/L3.html" />
-    <entry file="file://$USER_HOME$/AppData/Local/Temp/Rar$DRa4244.46737/Converting/scriptEasyConvertor.js" />
-    <entry file="file://$PROJECT_DIR$/../Cinema-theater/Basic page (test)/BasicPage.html" />
-    <entry file="file://$PROJECT_DIR$/../Cinema-theater/Basic page (test)/BasicStyle.css" />
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/mail.php" />
-    <entry file="file://$PROJECT_DIR$/../../../apache/conf/httpd.conf" />
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/phpmailer/class.phpmailer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1318">
-          <caret line="47" column="11" selection-start-line="47" selection-start-column="11" selection-end-line="47" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Images/long-arrow-pointing-up.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://H:/_/Университет ( 1 курс )/Script language/4 Lab/UserProf.php" />
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Images/screensaver4.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Images/SendMail.jpg">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Images/send.png">
       <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/StyleLogInRegisTer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="29" selection-start-line="9" selection-start-column="22" selection-end-line="9" selection-end-column="29" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$USER_HOME$/Documents/University(2 course)/TB/Программа/L1/JSLab1.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -395,13 +387,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="20" column="33" selection-start-line="20" selection-start-column="33" selection-end-line="20" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/StyleForCustomerMenu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="332" column="17" selection-start-line="332" selection-start-column="17" selection-end-line="332" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -449,13 +434,6 @@
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/mail.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/LogPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1185">
@@ -470,59 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/MainHTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1286">
-          <caret line="454" lean-forward="true" selection-start-line="454" selection-end-line="454" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ConfirmOrNOT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/AnimScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-711">
-          <caret line="6" column="20" selection-start-line="6" selection-start-column="20" selection-end-line="6" selection-end-column="20" />
-          <folding>
-            <element signature="n#!!block;n#FieldFST#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field4#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field5#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field6#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field7#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field8#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#CheckOnChars#0;n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field10#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#ClearFields#0" />
-            <element signature="n#!!block;n#CheckFields#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="1" selection-start-line="1" selection-end-line="16" selection-end-column="1" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$USER_HOME$/Documents/University(2 course)/AKOKM(practicke work)/PZ2/Calculator.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="990">
@@ -532,13 +457,6 @@
             <element signature="n#style#0;n#input#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#p#1;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="784">
-          <caret line="102" column="76" selection-start-line="102" selection-start-column="76" selection-end-line="102" selection-end-column="76" />
         </state>
       </provider>
     </entry>
@@ -591,13 +509,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="430">
-          <caret line="378" column="12" lean-forward="true" selection-start-line="378" selection-start-column="12" selection-end-line="378" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/DeleteCookies.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -629,39 +540,208 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3514">
-          <caret line="357" column="22" lean-forward="true" selection-start-line="357" selection-start-column="22" selection-end-line="357" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#7405#7684#0#HTML" />
-            <element signature="e#7712#7859#0#HTML" />
-            <element signature="e#7900#8331#0#HTML" />
-            <element signature="e#8358#8634#0#HTML" />
-            <element signature="e#8662#8807#0#HTML" />
-            <element signature="e#8842#9272#0#HTML" />
-            <element signature="e#9299#9579#0#HTML" />
-            <element signature="e#9607#9753#0#HTML" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#1;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#2;n#a#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4345">
-          <caret line="571" column="41" lean-forward="true" selection-start-line="571" selection-start-column="41" selection-end-line="571" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
           <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="612">
+          <caret line="48" column="27" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/restart.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/UserPhoto/man-user.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/UserPhoto/user.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/GetDataFromDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/Images/checked (1).png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/Images/cancel (1).png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/delete.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/MainHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-30">
+          <caret line="454" lean-forward="true" selection-start-line="454" selection-end-line="454" />
+          <folding>
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/SendMailFunc.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/LogPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/AnimScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1230">
+          <caret line="82" column="22" lean-forward="true" selection-start-line="82" selection-start-column="22" selection-end-line="82" selection-end-column="22" />
+          <folding>
+            <element signature="n#!!block;n#FieldFST#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field4#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field5#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field6#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field7#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field8#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#CheckOnChars#0;n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field10#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#ClearFields#0" />
+            <element signature="n#!!block;n#CheckFields#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ConfirmOrNOT.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/StyleLogInRegisTer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="485" lean-forward="true" selection-start-line="485" selection-end-line="536" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="697">
+          <caret line="477" column="87" selection-start-line="477" selection-start-column="87" selection-end-line="477" selection-end-column="87" />
+          <folding>
+            <element signature="n#!!block;n#FieldFST#0" />
+            <element signature="n#!!block;n#Field4#0" />
+            <element signature="n#!!block;n#Field5#0" />
+            <element signature="n#!!block;n#Field6#0" />
+            <element signature="n#!!block;n#Field7#0" />
+            <element signature="n#!!block;n#Field8#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/StyleForCustomerMenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4233">
+          <caret line="325" column="4" lean-forward="true" selection-start-line="325" selection-start-column="4" selection-end-line="325" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="383">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/question.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="504">
+          <caret line="274" selection-start-line="274" selection-end-line="297" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6330">
+          <caret line="186" lean-forward="true" selection-start-line="186" selection-end-line="186" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="344" column="97" selection-start-line="344" selection-start-column="97" selection-end-line="344" selection-end-column="97" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#0;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#1;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#2;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#3;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#4;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#5;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#1;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#3;n#span#0;n#div#0;n#div#0;n#td#1;n#tr#7;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#8;n#table#0;n#div#1;n#div#0;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterfaceStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="695">
+          <caret line="469" column="17" selection-start-line="469" selection-start-column="17" selection-end-line="469" selection-end-column="17" />
         </state>
       </provider>
     </entry>

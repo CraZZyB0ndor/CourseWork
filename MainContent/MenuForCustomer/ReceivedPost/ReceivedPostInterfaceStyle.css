@@ -1,7 +1,7 @@
 * {
 
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -462,7 +462,7 @@ body   {
     margin-left: auto;
 }
 
-.PostElement>div:nth-child(2)>div>input {
+.PostElement>div:nth-child(2)>div>button {
 
     font-family: 'Russo One', sans-serif;
     font-size: 22px;
@@ -476,22 +476,22 @@ body   {
     cursor: pointer;
 }
 
-.PostElement>div:nth-child(2)>div>input:nth-child(1) {
+.PostElement>div:nth-child(2)>div>button:nth-child(1) {
 
     background-color: #00BA74;
 }
 
-.PostElement>div:nth-child(2)>div>input:nth-child(1):hover {
+.PostElement>div:nth-child(2)>div>button:nth-child(1):hover {
 
     background-color: #009D62;
 }
 
-.PostElement>div:nth-child(2)>div>input:nth-child(2) {
+.PostElement>div:nth-child(2)>div>button:nth-child(2) {
 
     background-color: #DF0B00;
 }
 
-.PostElement>div:nth-child(2)>div>input:nth-child(2):hover {
+.PostElement>div:nth-child(2)>div>button:nth-child(2):hover {
 
     background-color: #AD0B02;
 }
