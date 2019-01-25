@@ -72,7 +72,7 @@ if ($ArrResult === false) {
 
         <a href="" class="RegProfile statistic">СТАТИСТИКА</a>
         <p class="RegProfile email"><?php echo $_COOKIE['E-mail']; ?></p>
-        <a href="" class="RegProfile regUserProf">РЕДАГУВАТИ ПРОФІЛЬ</a>
+        <a href="EditPROFILE/EditProfileMenuInterface.php" class="RegProfile regUserProf">РЕДАГУВАТИ ПРОФІЛЬ</a>
 
         <img id="Settings" src="Images/settings.png">
 

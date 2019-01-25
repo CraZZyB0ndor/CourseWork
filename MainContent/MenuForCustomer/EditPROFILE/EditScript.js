@@ -300,21 +300,6 @@ function Field6(Phone, NameIMG, Button) {
 
 }
 
-// Password checker.
-
-function Field7() {
-
-    var pattern = /^[A-ZА-ЯІ]{2}\d{6}$/;
-
-    if (pattern.test(PassportNum.value)) {
-        PassportNumIMG.src = "Images/checked (1).png";
-    } else if ( PassportNum.value.length === 0 ) {
-        PassportNumIMG.src = "";
-    } else {
-        PassportNumIMG.src = "Images/cancel (1).png";
-    }
-}
-
 function Field8(Login, NameIMG, Button) {
 
     var pattern  = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
@@ -362,6 +347,8 @@ function CancelEdit() {
             document.getElementById('NameOfEditRow').textContent = '';
 
             buttonDeletInputContent[0].style.display = 'none';
+
+            document.getElementById('SurnameID').value = document.getElementsByClassName('UserDataFromPHP')[0].textContent;
 
             CheckOnChange('Surname', document.getElementsByClassName('UserDataFromPHP')[0].textContent);
 
