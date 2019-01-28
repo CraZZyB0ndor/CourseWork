@@ -5,7 +5,7 @@
 }
 
 a {
-    
+
     text-decoration: none;
     color: #000;
 }
@@ -74,7 +74,7 @@ body   {
     justify-content: center;
     align-items: center;
 
-    //background-color: green;
+//background-color: green;
 }
 
 #SearchPost>input[type='text'] {
@@ -154,19 +154,19 @@ body   {
     justify-content: center;
     align-items: center;
 
-    //background-color: red;
+//background-color: red;
 }
 
 #SortFilter {
 
     display: flex;
     flex-direction: row;
-    //justify-content: space-around;
+//justify-content: space-around;
     align-items: center;
 
-    //width: 150px;
+//width: 150px;
 
-    //background-color: yellow;
+//background-color: yellow;
 }
 
 #SortFilter>img {
@@ -185,67 +185,16 @@ body   {
     opacity: 0.5;
 }
 
-#ActionPost {
-
-    display: flex;
-    flex-direction: row;
-    //justify-content: space-around;
-    align-items: center;
-
-    //width: 500px;
-
-    //background-color: gray;
-    font-family: 'Cuprum', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-
-}
-
-#ActionPost>input {
-
-    font-family: 'Russo One', sans-serif;
-    font-size: 25px;
-    font-weight: bold;
-
-    margin-left: 20px;
-
-    border: solid black 2px;
-    padding: 2px;
-
-    cursor: pointer;
-    outline: none;
-}
-
-#ActionPost>input:nth-child(1) {
-
-    background-color: #00BA74;
-}
-
-#ActionPost>input:nth-child(1):hover {
-
-    background-color: #009D62;
-}
-
-#ActionPost>input:nth-child(2) {
-
-    background-color: #DF0B00;
-}
-
-#ActionPost>input:nth-child(2):hover {
-
-    background-color: #AD0B02;
-}
-
 #RefreshHelp {
 
     display: flex;
     flex-direction: row;
-    //justify-content: space-around;
+//justify-content: space-around;
     align-items: center;
 
-    //width: 200px;
+//width: 200px;
 
-    //background-color: blue;
+//background-color: blue;
 }
 
 #RefreshHelp>input {
@@ -288,7 +237,7 @@ body   {
     margin-left: 20px;
 
     padding: 5px;
-    
+
     cursor: pointer;
 }
 
@@ -314,72 +263,17 @@ body   {
 
 }
 
-.PostElement>div:nth-child(1) {
+.PostElement>a {
 
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
-    margin-left: 5px;
-    margin-right: 10px;
-
-    width: 110px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
-.PostElement>div:nth-child(1)>input {
-
-    margin-right: 10px;
-}
-
-.PostElement>div:nth-child(1)>input {
-
-    cursor: pointer;
-}
-
-.checkbox input {
-    position: absolute;
-    z-index: -1;
-    opacity: 0;
-}
-.checkbox__text {
-    position: relative;
-    cursor: pointer;
-}
-.checkbox__text:before {
-    content: '';
-    position: absolute;
-    top: -8px;
-    left: 0;
-    width: 38px;
-    height: 20px;
-    border-radius: 13px;
-    background: #CDD1DA;
-    box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
-    transition: .2s;
-}
-.checkbox__text:after {
-    content: '';
-    position: absolute;
-    top: -6px;
-    left: 0px;
-    width: 15px;
-    height: 15px;
-    border-radius: 10px;
-    background: #FFF;
-    box-shadow: 0 2px 5px rgba(0,0,0,.3);
-    transition: .2s;
-}
-.checkbox input:checked + .checkbox__text:before {
-    background: #00BA74;
-}
-.checkbox input:checked + .checkbox__text:after {
-    left: 22px;
-}
-.checkbox input:focus + .checkbox__text:before {
-    box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(0,0,0,.7);
-}
-
-.PostElement>div:nth-child(1)>a>img {
+.PostElement>a>img {
 
     width: 40px;
     height: 40px;
@@ -389,12 +283,12 @@ body   {
     cursor: pointer;
 }
 
-.PostElement>div:nth-child(1)>a>img:hover {
+.PostElement>a>img:hover {
 
     opacity: 0.5;
 }
 
-.PostElement>div:nth-child(2) {
+.PostElement>div {
 
     display: flex;
     flex-direction: row;
@@ -425,7 +319,24 @@ body   {
     background-color: #ADADAD;
 }
 
-.PostElement>div:nth-child(2)>a, .PostElement>div:nth-child(2)>a>div, .PostElement>div:nth-child(2)>div {
+.PostElement>div>p {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+    font-family: 'Russo One', sans-serif;
+
+    font-size: 30px;
+
+    width: 250px;
+
+    margin-left: 20px;
+
+}
+
+.PostElement>div>a, .PostElement>div>a>div, .PostElement>div>div {
 
     display: flex;
     justify-content: flex-start;
@@ -433,15 +344,15 @@ body   {
 
 }
 
-.PostElement>div:nth-child(2)>a>div:nth-child(1) {
+.PostElement>div>a>div:nth-child(1) {
 
-    width: 570px;
+    width: 670px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-.PostElement>div:nth-child(2)>a>div:nth-child(2) {
+.PostElement>div>a>div:nth-child(2) {
 
     margin-left: 20px;
     width: 250px;
@@ -451,18 +362,18 @@ body   {
 
 }
 
-.PostElement>div:nth-child(2)>a>div:nth-child(3) {
+.PostElement>div>a>div:nth-child(3) {
 
     margin-left: 20px;
     width: 350px;
 }
 
-.PostElement>div:nth-child(2)>div:nth-child(1) {
+.PostElement>div>div:nth-child(1) {
 
     margin-left: auto;
 }
 
-.PostElement>div:nth-child(2)>div>button {
+.PostElement>div>div>button {
 
     font-family: 'Russo One', sans-serif;
     font-size: 22px;
@@ -476,22 +387,22 @@ body   {
     cursor: pointer;
 }
 
-.PostElement>div:nth-child(2)>div>button:nth-child(1) {
+.PostElement>div>div>button:nth-child(1) {
 
     background-color: #00BA74;
 }
 
-.PostElement>div:nth-child(2)>div>button:nth-child(1):hover {
+.PostElement>div>div>button:nth-child(1):hover {
 
     background-color: #009D62;
 }
 
-.PostElement>div:nth-child(2)>div>button:nth-child(2) {
+.PostElement>div>>div>button:nth-child(2) {
 
     background-color: #DF0B00;
 }
 
-.PostElement>div:nth-child(2)>div>button:nth-child(2):hover {
+.PostElement>div>div>button:nth-child(2):hover {
 
     background-color: #AD0B02;
 }
@@ -509,8 +420,6 @@ body   {
     z-index: 5;
 
     background-color: rgba(0, 0, 0, 0.7);
-
-
 }
 
 #MainContentModalWindow {
@@ -518,7 +427,7 @@ body   {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+
     width: 400px;
     height: 280px;
     margin-top: 10%;
@@ -582,7 +491,7 @@ body   {
     position: absolute;
 
     width: 200px;
-    height: 150px;
+    height: 185px;
 
     display: none;
     justify-content: center;
@@ -595,7 +504,7 @@ body   {
     z-index: 1;
 
     top: 20%;
-    left: 36.25%;
+    left: 47.90%;
 }
 
 .SortMenuDisplay {
@@ -710,11 +619,11 @@ body   {
 
     z-index: 1;
 
-    width: 250px;
-    height: 173px;
+    width: 260px;
+    height: 215px;
 
     top: 20%;
-    left: 38.40%;
+    left: 49.75%;
 
     font-weight: bold;
     font-family: 'Russo One', sans-serif;
@@ -743,6 +652,8 @@ body   {
 
     align-self: flex-start;
 
+    width: 260px;
+
     font-weight: lighter;
     font-family: 'Cuprum', sans-serif;
     font-size: 25px;
@@ -753,23 +664,66 @@ body   {
 
 #TypePost>p {
 
-    margin-right: 10px;
+
+    margin-right: auto;
     text-transform: capitalize;
 
 }
 
 #TypePost>select {
 
+
     font-family: 'Cuprum', sans-serif;
     font-size: 20px;
 
     outline: none;
+
+    margin-right: 10px;
 
     width: 190px;
 
     text-align: center;
     text-transform: uppercase;
 
+}
+#ConditionPost {
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    align-self: flex-start;
+
+    width: 260px;
+
+    font-weight: lighter;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 25px;
+
+    margin-top: 15px;
+    margin-left: 5px;
+}
+
+#ConditionPost>p {
+
+    margin-right: auto;
+    text-transform: capitalize;
+}
+
+#ConditionPost>select {
+
+    font-family: 'Cuprum', sans-serif;
+    font-size: 20px;
+
+    outline: none;
+
+    margin-right: 10px;
+
+    width: 190px;
+
+    text-align: center;
+    text-transform: uppercase;
 }
 
 #FilterButton {
@@ -834,6 +788,8 @@ body   {
 
     align-self: flex-start;
 
+    width: 260px;
+
     font-weight: lighter;
     font-family: 'Cuprum', sans-serif;
     font-size: 25px;
@@ -844,7 +800,7 @@ body   {
 
 #TimeReceived>p {
 
-    margin-right: 10px;
+    margin-right: auto;
     text-transform: capitalize;
 
 }
@@ -855,6 +811,8 @@ body   {
     font-size: 20px;
 
     outline: none;
+
+    margin-right: 10px;
 
     width: 190px;
 

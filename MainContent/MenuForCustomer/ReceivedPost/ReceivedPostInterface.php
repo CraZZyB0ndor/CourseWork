@@ -50,9 +50,9 @@ if ( isset($_POST['confirm']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Чудово! Ваша пошта прийнята! Повідомлення відправлене до архіву';</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
-    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_POST['confirm'];
+    $query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Прийнято' WHERE `ID-post` =" . $_POST['confirm'];
 
-    //mysqli_query($connectMySQL, $query_confirm);
+    mysqli_query($connectMySQL, $query_confirm);
 
 }
 
@@ -61,13 +61,16 @@ if ( isset($_POST['disregard']) ) {
     echo "<script>document.getElementById('TextActionModalWindow').textContent = 'Ви відмовились від пошти! Повідомлення відправлене до архіву'</script>";
     echo "<script>document.getElementById('ModalWindow').style.display = 'flex';</script>";
 
-    //$query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_POST['disregard];
+    $query_confirm = "UPDATE `Statuspost` SET `StatusOfPost` = 'Відмовлено' WHERE `ID-post` =" . $_POST['disregard'];
 
-    //mysqli_query($connectMySQL, $query_confirm);
+    mysqli_query($connectMySQL, $query_confirm);
 
 }
 
-$ResultPosts = DisplayPosts($connectMySQL, "");
+
+// Refactor 27.01.2019.
+
+$ResultPosts = ProcessingPostData($connectMySQL);
 
 if (isset($_POST['Search'])) {
 
@@ -76,6 +79,8 @@ if (isset($_POST['Search'])) {
     $_SESSION['search'] = "AND (U.`SecondName` LIKE '%". $_POST['SearchInput'] ."%' OR U.`FirstName` LIKE '%". $_POST['SearchInput'] ."%' OR 
     U.`Patronymic` LIKE '%". $_POST['SearchInput'] ."%' OR U.`E-mail` LIKE '%". $_POST['SearchInput'] ."%' OR S.`DateOfReceipt` LIKE '%". $_POST['SearchInput'] ."%' OR
     P.`TypePost` LIKE '%". $_POST['SearchInput'] ."%')";
+
+    // Refactor 27.01.2019.
 
     $ResultPosts = ProcessingPostData($connectMySQL);
 
@@ -120,6 +125,8 @@ if ( isset($_POST['ReceivedCheckBox']) ) {
         //echo "$query_update_row";
 
         mysqli_query($connectMySQL, $query_update_row);
+
+        // Refactor 27.01.2019.
 
         $ResultPosts = ProcessingPostData($connectMySQL);
 
@@ -167,6 +174,8 @@ if ( isset($_POST['DisregardCheckBox']) ) {
         //echo "$query_update_row";
 
         mysqli_query($connectMySQL, $query_update_row);
+
+        // Refactor 27.01.2019.
 
         $ResultPosts = ProcessingPostData($connectMySQL);
 
@@ -461,14 +470,29 @@ if ( isset($_POST['DisregardCheckBox']) ) {
                         if (key_exists('TypeS', $_SESSION)) {
 
                             unset($_SESSION['TypeS']);
-
                         }
 
                         if (key_exists('FilterS', $_SESSION)) {
 
                             unset($_SESSION['FilterS']);
-
                         }
+
+                        if (key_exists('order', $_SESSION)) {
+
+                            unset($_SESSION['order']);
+                        }
+
+                        if (key_exists('filter', $_SESSION)) {
+
+                            unset($_SESSION['filter']);
+                        }
+
+                        if (key_exists('search', $_SESSION)) {
+
+                            unset($_SESSION['search']);
+                        }
+
+                        $ResultPosts = ProcessingPostData($connectMySQL);
 
                     }
 
@@ -504,7 +528,7 @@ if ( isset($_POST['DisregardCheckBox']) ) {
                     <select name="FTTime" id="TimeSendID" onchange="SelectTab();">
 
                         <option value="Весь час" id="AllTime">Весь час</option>
-                        <option value="С [--] ДО [--]" id="CertainTime">С [--] ДО [--]</option>
+                        <option value="С [--] ДО [--]" id="CertainTime">З [--] ДО [--]</option>
 
                     </select>
 
@@ -698,7 +722,9 @@ if ( isset($_POST['DisregardCheckBox']) ) {
                     </label>
 
 
-                    <img src=\"Images/open-mail.png\" title=\"Відкрити повідомлення\">
+                    <a href='ViewPost.php?NumDiv=" . "$ID'"."><img src=\"Images/open-mail.png\" title=\"Відкрити повідомлення\"></a>
+                    
+                    
                 </div>
 
                 <div>

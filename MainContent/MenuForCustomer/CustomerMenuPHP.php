@@ -56,8 +56,8 @@ if ($ArrResult === false) {
 
             <div id="DisplayPost">
 
-                <div class="SR"><span title="Кількість відправленої пошти, яка знаходиться в дорозі" id="TO"></span><img src="Images/long-arrow-pointing-up.png"></div>
-                <div class="SR"><span title="Кількість пошти, яка чекає підтвердження" id="FROM"></span><img src="Images/down-arrow.png"></div>
+                <div class="SR"><span title="Кількість відправленої Вами пошти, яка знаходиться в дорозі" id="TO"></span><img src="Images/long-arrow-pointing-up.png"></div>
+                <div class="SR"><span title="Кількість пошти, яка Вам доставлена та не оброблена" id="FROM"></span><img src="Images/down-arrow.png"></div>
 
             </div>
 
@@ -70,7 +70,7 @@ if ($ArrResult === false) {
 
         </div>
 
-        <a href="" class="RegProfile statistic">СТАТИСТИКА</a>
+        <a href="Statistic/StatisticsInterface.php" class="RegProfile statistic">СТАТИСТИКА</a>
         <p class="RegProfile email"><?php echo $_COOKIE['E-mail']; ?></p>
         <a href="EditPROFILE/EditProfileMenuInterface.php" class="RegProfile regUserProf">РЕДАГУВАТИ ПРОФІЛЬ</a>
 
@@ -113,9 +113,9 @@ if ($ArrResult === false) {
 
     <div id="SendANDHelp" >
 
-        <a id="ArchiveSendANDReceivedPost" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
+        <a id="ArchiveSendANDReceivedPost" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;" href="Archive/ArchiveInterface.php">
 
-            <span class="SendLetter">Архів прийнятої і відправленої пошти <sup id="FROMTO" style="background-color: darkred;
+            <span class="SendLetter">Архів прийнятої і не прийнятої пошти <sup id="FROMTO" style="background-color: darkred;
     border-radius: 100px; color: white; width: 40px; height: 40px; margin-right: 10px; display: flex; justify-content: center; align-items: center;"></sup></span>
             <img src="Images/branding.png">
             

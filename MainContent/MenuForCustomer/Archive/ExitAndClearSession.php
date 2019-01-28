@@ -12,6 +12,11 @@ if (key_exists('TypeS', $_SESSION)) {
     unset($_SESSION['TypeS']);
 }
 
+if (key_exists('ConditionS', $_SESSION)) {
+
+    unset($_SESSION['ConditionS']);
+}
+
 if (key_exists('FilterS', $_SESSION)) {
 
     unset($_SESSION['FilterS']);
