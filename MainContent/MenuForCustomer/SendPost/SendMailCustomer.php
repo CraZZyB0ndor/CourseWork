@@ -293,7 +293,7 @@ if ( isset($_POST['SendCashButton']) ) {
 
                 <div>
                     <img src="Images/checked.png" alt="Sent">
-                    <p>ЛИСТ УСПІШНО ВІДПРАВЛЕНО</p>
+                    <p>ПОШТУ УСПІШНО ВІДПРАВЛЕНО</p>
                 </div>
 
 
@@ -397,10 +397,21 @@ if ( array_key_exists('DescriptionCash', $_SESSION) ) {
 
     }
 
+    <?php
 
-    $('#SelectChooseBox').val('<?php echo $_SESSION['TypeOfBox']; ?>');
 
-    $('#CurrencyStyle').val('<?php echo $_SESSION['TypeOfCash']; ?>');
+    if (key_exists('TypeOfBox', $_SESSION)) {
+
+        echo "$('#SelectChooseBox').val('" . $_SESSION['TypeOfBox'] ."');";
+    }
+
+    if (key_exists('TypeOfCash', $_SESSION)) {
+
+        echo "$('#CurrencyStyle').val('" . $_SESSION['TypeOfCash'] . "');";
+    }
+
+
+    ?>
 
 </script>
 

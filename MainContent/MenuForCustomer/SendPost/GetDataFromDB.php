@@ -22,7 +22,7 @@ function DetermineInfoAboutUser($connectMYSQL) {
 function DetermineAllUsers($connectMYSQL, $ID) {
 
 
-    if ($_COOKIE['Sender-ID'] == $ID ) {
+    if ($_COOKIE['Sender-ID'] == $ID || 4 == $ID ) {
 
         return false;
     }
@@ -46,11 +46,11 @@ function DetermineAllUsers($connectMYSQL, $ID) {
 
 function DetermineAllPhoneNumberOfUsers() {
 
-
+// ...
 }
 
 function DetermineAllAddressOfUsers() {
 
-
+// ...
 }
 ?>

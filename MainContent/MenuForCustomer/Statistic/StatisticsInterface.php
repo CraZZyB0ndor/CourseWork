@@ -13,11 +13,36 @@ $connectMySQL = new mysqli($serverName, $userName, $password, $nameDataBase);
 
 mysqli_query($connectMySQL, "SET character_set_results = 'utf8', character_set_client = 'utf8', character_set_connection = 'utf8', character_set_database = 'utf8', character_set_server = 'utf8'");
 
-$_SESSION['checkSelect'] = 0;
-
 include 'SelectControlling.php';
 
-if (isset($_POST['SubjectSelect'])) {
+$query_check_count_post = "SELECT COUNT(DISTINCT P.`ID-post`) FROM `Waybill` W, `Post` P WHERE W.`ID-sender` = '". $_COOKIE['Sender-ID'] ."' AND 
+                            W.`ID-post` = P.`ID-post`";
+
+$do_query_check_count_post = mysqli_query($connectMySQL, $query_check_count_post);
+$array_do_query_check_count_post = mysqli_fetch_array($do_query_check_count_post);
+
+
+if ($array_do_query_check_count_post[0] >= 1) {
+
+    $_SESSION['checkSelect'] = 0;
+
+} else {
+
+    $_SESSION['checkSelect'] = '-1';
+
+    $SentPostArriveWait['Arrive post'] = 0;
+    $SentPostArriveWait['Wait post'] = 0;
+    $SentPostReceivedDismiss['Received post'] = 0;
+    $SentPostReceivedDismiss['Dismiss post'] = 0;
+    $SentPostReceivedDismiss['TimeStart'] = 0;
+    $SentPostReceivedDismiss['TimeFinish'] = 0;
+    $SumSentPosts['Sum send post'] = 0;
+
+}
+
+//
+
+if (isset($_POST['BuildGraphic'])) {
 
     SelectSubject($connectMySQL);
 }
@@ -25,7 +50,7 @@ if (isset($_POST['SubjectSelect'])) {
 
 if ( $_SESSION['checkSelect'] === 0 ) {
 
-    $query_min_date_sent_post = "SELECT MIN(P.`DateOfReception`) FROM `Waybill` W, `Post` P WHERE W.`ID-sender` = '". $_COOKIE['Sender-ID'] ."' AND 
+    /* $query_min_date_sent_post = "SELECT MIN(P.`DateOfReception`) FROM `Waybill` W, `Post` P WHERE W.`ID-sender` = '". $_COOKIE['Sender-ID'] ."' AND
                                  W.`ID-post` = P.`ID-post`";
 
     $do_query_min_date_sent_post = mysqli_query($connectMySQL, $query_min_date_sent_post);
@@ -37,32 +62,22 @@ if ( $_SESSION['checkSelect'] === 0 ) {
     $SentPostReceivedDismiss = ArrayReceivedDismissPost($connectMySQL, $min_date[0], date("Y-m-d H:i:s"));
     $SumSentPosts = SendPost($connectMySQL, $min_date[0], date("Y-m-d H:i:s"));
     $arr_for_graphic_sent_post = ArraySentPost($connectMySQL, $min_date[0], date("Y-m-d H:i:s"));
+*/
 
-} else {
+    SelectSubject($connectMySQL);
+
+    $SentPostArriveWait = $_SESSION['ArriveWait'];
+    $SentPostReceivedDismiss = $_SESSION['ReceivedDismiss'];
+    $SumSentPosts = $_SESSION['SumSentPosts'];
+    $arr_for_graphic_sent_post = $_SESSION['DisplayAllSentPost'];
 
 
-    // Написать проверку на существование нижеперечисленых элементов суперглобального массива SESSION.
-
-    if (key_exists('ArriveWait', $_SESSION)) {
+} else if ( $_SESSION['checkSelect'] === '01' ) {
 
         $SentPostArriveWait = $_SESSION['ArriveWait'];
-    }
-
-    if (key_exists('ReceivedDismiss', $_SESSION)) {
-
         $SentPostReceivedDismiss = $_SESSION['ReceivedDismiss'];
-    }
-
-    if (key_exists('SumSentPosts', $_SESSION)) {
-
         $SumSentPosts = $_SESSION['SumSentPosts'];
-    }
-
-    if (key_exists('DisplayAllSentPost', $_SESSION)) {
-
         $arr_for_graphic_sent_post = $_SESSION['DisplayAllSentPost'];
-
-    }
 
 }
 
@@ -91,13 +106,14 @@ if ( $_SESSION['checkSelect'] === 0 ) {
 
 </head>
 
-<a href="http://localhost/dashboard/CourseWork/MainContent/MenuForCustomer/CustomerMenuPHP.php"><img src="Images/restart.png"></a>
-
-<p>СТАТИСТИКА</p>
-
 <body style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
 
-<main>
+<div class="FixedElement" style="background-image: url('Images/blur-bright-close-up-1405773.jpg'); background-attachment: fixed;">
+
+
+    <a href="ExitAndClearSession.php"><img src="Images/restart.png"></a>
+
+    <p>СТАТИСТИКА</p>
 
 
     <div id="ControlPanel">
@@ -105,55 +121,61 @@ if ( $_SESSION['checkSelect'] === 0 ) {
         <form  method="POST" action="<?php echo $_SERVER['PHP_SELF']; ?>" enctype="application/x-www-form-urlencoded">
 
 
-        <div id="SubjectOfStatistic">
+            <div id="SubjectOfStatistic">
 
-            <p>предмет статистики: </p>
+                <p>предмет статистики: </p>
 
-            <select name="SubjectSelect" id="SelectSubject">
+                <select name="SubjectSelect" id="SelectSubject">
 
-                <option value="відправлена пошта">відправлена пошта</option>
-                <option value="отримана пошта">отримана пошта</option>
-                <option value="загальна статистика користувача">загальна статистика користувача</option>
-
-
-            </select>
-
-        </div>
-
-        <div id="TimeBorder">
-
-            <p>часові обмеження: </p>
-
-            <select name="TimeSelect" id="SelectTime">
-
-                <option value="З [--] ДО [--]">З [--] ДО [--]</option>
-                <option value="за весь час">за весь час</option>
-
-            </select>
-
-        </div>
+                    <option value="відправлена пошта">відправлена пошта</option>
+                    <option value="отримана пошта">отримана пошта</option>
+                    <option value="загальна статистика користувача">загальна статистика користувача</option>
 
 
+                </select>
+
+            </div>
+
+            <div id="TimeBorder">
+
+                <p>часові обмеження: </p>
+
+                <select name="TimeSelect" id="SelectTime">
+
+                    <option value="З [--] ДО [--]">З [--] ДО [--]</option>
+                    <option value="за весь час">за весь час</option>
+
+                </select>
+
+            </div>
 
 
-        <div id="BuildStatistic">
 
-            <button type="submit"><img src="Images/build_statistic.png" onclick="" title="Побудувати статистику"></button>
-            
-        </div>
+
+            <div id="BuildStatistic">
+
+                <button type="submit" name="BuildGraphic"><img src="Images/build_statistic.png" onclick="" title="Побудувати статистику"></button>
+
+            </div>
 
         </form>
 
     </div>
 
 
-    <div id="PrintStatistic">
+    <div id="PrintStatistic" >
 
         <p>статистика обмежується проміжком часу: <span id="TimeBuildGraphic"></span></p>
         <input type="button" value="НАДРУКУВАТИ СТАТИСТИКУ" onclick="DeterminePrintContent();">
 
     </div>
 
+
+</div>
+
+    <main>
+
+        <p id="NonePost">ви не відправили жодної пошти</p>
 
     <div id="GraphicOfStatistic">
 
@@ -219,6 +241,15 @@ if ( $_SESSION['checkSelect'] === 0 ) {
 <script>
 
 switch  ('<?php echo $_SESSION['checkSelect']; ?>') {
+
+    case '-1':
+
+        document.getElementById('GraphicOfStatistic').style.display = 'none';
+        document.getElementById('PrintStatistic').style.display = 'none';
+        document.getElementById('BuildStatistic').style.display = 'none';
+        document.getElementById('NonePost').style.display = 'flex';
+
+        break;
 
     case '0':
 
@@ -297,7 +328,18 @@ switch  ('<?php echo $_SESSION['checkSelect']; ?>') {
 function DeterminePrintContent() {
 
 
-    switch('<?php echo $_POST['SubjectSelect']; ?>') {
+    switch('<?php
+
+            if (key_exists('SubjectSelect', $_POST)) {
+
+                echo $_POST['SubjectSelect'];
+
+            } else {
+
+                echo 'відправлена пошта';
+            }
+
+        ?>') {
 
         case 'відправлена пошта':
 
@@ -319,15 +361,25 @@ function DeterminePrintContent() {
             ['Дата відправки пошти', 'Кількість відправленої пошти'],
             <?php
 
-            for ($i = 0; $i < count($arr_for_graphic_sent_post); $i++) {
+                if ($_SESSION['checkSelect'] == '0' || $_SESSION['checkSelect'] == '01') {
 
-                for ($j = 0; $j < count($arr_for_graphic_sent_post[$i]); $j++) {
+        for ($i = 0; $i < count($arr_for_graphic_sent_post); $i++) {
 
-                    echo "['". $arr_for_graphic_sent_post[$i][$j] ."', " . $arr_for_graphic_sent_post[$i][$j + 1] . "],\n";
+            for ($j = 0; $j < count($arr_for_graphic_sent_post[$i]); $j++) {
 
-                    break;
-                }
+                echo "['". $arr_for_graphic_sent_post[$i][$j] ."', " . $arr_for_graphic_sent_post[$i][$j + 1] . "],\n";
+
+                break;
             }
+        }
+
+
+
+                } else {
+
+                    echo "['0', 0 ],";
+                }
+
 
             ?>
         ]);

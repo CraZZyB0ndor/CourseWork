@@ -296,13 +296,17 @@ function ClearFields() {
 
 function CheckFields() {
 
-    var arrayIMG = [SecondNameIMG, FirstNameIMG, PatronymicIMG, DateOfBirthIMG, AdressIMG, PhoneIMG, PassportNumIMG, LoginIMG, PasswordRIMG];
+    var arrayIMG = [SecondNameIMG, FirstNameIMG, PatronymicIMG, DateOfBirthIMG, AdressIMG, PhoneIMG, LoginIMG, PasswordRIMG];
     var count = 0;
 
     for (var i = 0; i < arrayIMG.length; i++) {
-        if (/checked%20\(1\).png/.test(arrayIMG[i].src) ) {
+
+        if (/checked%20\(1\).png/.test(arrayIMG[i].src) && !/cancel%20\(1\).png/.test(PassportNumIMG.src) ) {
+
             count++;
+
         } else {
+
             ButtonForSendingForm.style.display = 'none';
             return;
         }

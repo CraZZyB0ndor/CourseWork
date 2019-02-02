@@ -9,7 +9,7 @@ body {
     //overflow: hidden;
 }
 
-body>p {
+body>div>p {
 
     font-family: 'Russo One', sans-serif;
     font-size: 35px;
@@ -18,7 +18,7 @@ body>p {
     margin-top: 15px;
 }
 
-body>a>img {
+body>div>a>img {
 
     width: 70px;
     height: 70px;
@@ -33,7 +33,7 @@ body>a>img {
     cursor: pointer;
 }
 
-body>a>img:hover {
+body>div>a>img:hover {
 
     opacity: 0.5 ;
 }
@@ -43,6 +43,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    margin-top: 250px;
 }
 
 #ControlPanel {
@@ -291,4 +293,32 @@ form {
     font-size: 30px;
 
     margin-left: 5px;
+}
+
+.FixedElement {
+
+    position: fixed;
+
+    z-index: 10;
+
+    top: 0;
+
+    background-color: white;
+
+    width: 100%;
+    height: 260px;
+}
+
+#NonePost {
+
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    text-transform: uppercase;
+
+    font-family: 'Russo One', sans-serif;
+    font-size: 40px;
+
+    margin-top: 250px;
 }

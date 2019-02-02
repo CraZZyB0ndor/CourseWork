@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php" line="36" mnemonic="4" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="4708dc14-dc42-4cf0-9f58-c1538010ce51" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -34,59 +31,7 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/GetDataFromDB.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="988">
-              <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="540">
-              <caret line="36" column="114" selection-start-line="36" selection-start-column="114" selection-end-line="36" selection-end-column="114" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterface.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1877">
-              <caret line="303" column="44" selection-start-line="303" selection-start-column="44" selection-end-line="303" selection-end-column="44" />
-              <folding>
-                <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#8736#9875#0#HTML" />
-                <element signature="e#10518#10627#0#HTML" />
-                <element signature="e#11265#11364#0#HTML" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StyleForPrint.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterfaceStyle.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="785">
-              <caret line="294" selection-start-line="294" selection-end-line="294" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,33 +56,17 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Date.js" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/functionsForDisplay.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/GetDataFromDB.php" />
-        <option value="$PROJECT_DIR$/LogInRegisTer/MainHTML.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/DynamicDisplay.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/FROM.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/StyleForCustomerMenu.css" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/JavaScroptForSendMailCustomers.js" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SelectItem.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/GoToMainMenu.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/ClearEnterInfo.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPostStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ViewPost.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ConfirmOrNOT.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/SelectInfoAboutPost.php" />
         <option value="$USER_HOME$/Documents/University(2 course)/AKOKM(practicke work)/PZ2/Calculator.html" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToEmail.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToCash.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/GetDataFromDB.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditScript.js" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterface.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditProfileMenuInterfaceStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControling.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/SelectInfoAboutPost.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ViewPostStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ViewPost.php" />
@@ -155,13 +84,29 @@
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/FROMTO.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/TO.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/DeleteCookies.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/GetDataAboutUser.php" />
-        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterfaceStyle.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticSendPost.php" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StyleForPrint.css" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/ExitAndClearSession.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/GetDataFromDB.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterPost.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterPostChecked.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterCustomers.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/ExitAndClearSessionAndCookie.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/MainAdminMenuStyle.css" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/MainAdminMenuInterface.php" />
+        <option value="$PROJECT_DIR$/LogInRegisTer/AnimScript.js" />
+        <option value="$PROJECT_DIR$/LogInRegisTer/MainHTML.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterfaceStyle.css" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css" />
         <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterface.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToCash.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToEmail.php" />
+        <option value="$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php" />
       </list>
     </option>
   </component>
@@ -169,10 +114,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="323" />
-    <option name="y" value="23" />
-    <option name="width" value="960" />
-    <option name="height" value="970" />
+    <option name="width" value="1680" />
+    <option name="height" value="1050" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -197,13 +140,6 @@
               <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
               <item name="MainContent" type="462c0819:PsiDirectoryNode" />
               <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="CourseWork" type="b2602c69:ProjectViewProjectNode" />
-              <item name="CourseWork" type="462c0819:PsiDirectoryNode" />
-              <item name="MainContent" type="462c0819:PsiDirectoryNode" />
-              <item name="MenuForCustomer" type="462c0819:PsiDirectoryNode" />
-              <item name="Statistic" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -279,18 +215,18 @@
       <workItem from="1544280337211" duration="1732000" />
       <workItem from="1544352900151" duration="818000" />
       <workItem from="1544356261413" duration="29085000" />
-      <workItem from="1546119932486" duration="299310000" />
+      <workItem from="1546119932486" duration="310399000" />
+      <workItem from="1548756190383" duration="7614000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="510224000" />
+    <option name="totallyTimeSpent" value="528927000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2967033" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3003663" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -315,109 +251,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/delete.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/MainHTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="454" lean-forward="true" selection-start-line="454" selection-end-line="454" />
-          <folding>
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/SendMailFunc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/LogPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ConfirmOrNOT.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/StyleLogInRegisTer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="485" lean-forward="true" selection-start-line="485" selection-end-line="536" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/StyleForCustomerMenu.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4233">
-          <caret line="325" column="4" lean-forward="true" selection-start-line="325" selection-start-column="4" selection-end-line="325" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/question.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/Images/delete.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/Images/apple_blur.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/Images/cancel.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/GetDataFromDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="21" selection-start-line="14" selection-start-column="21" selection-end-line="14" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/Images/mail.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LogInRegisTer/AnimScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="543">
-          <caret line="166" column="4" lean-forward="true" selection-start-line="166" selection-start-column="4" selection-end-line="260" selection-end-column="5" />
-          <folding>
-            <element signature="n#!!block;n#FieldFST#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field4#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field5#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field6#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field7#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field8#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#CheckOnChars#0;n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
-            <element signature="n#!!block;n#ClearFields#0" />
-            <element signature="n#!!block;n#CheckFields#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/EditScript.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3285">
-          <caret line="300" column="1" selection-start-line="300" selection-start-column="1" selection-end-line="300" selection-end-column="1" />
-          <folding>
-            <element signature="n#!!block;n#FieldFST#0" />
-            <element signature="n#!!block;n#Field4#0" />
-            <element signature="n#!!block;n#Field5#0" />
-            <element signature="n#!!block;n#Field6#0" />
-            <element signature="n#!!block;n#Field8#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/EditPROFILE/Images/blur-bright-close-up-1405773.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$USER_HOME$/Documents/University(2 course)/TB/Программа/L4/Histogram.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -483,13 +316,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="26" lean-forward="true" selection-start-line="6" selection-start-column="26" selection-end-line="6" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ViewPost.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -505,13 +331,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ClearSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ClearSession.php" />
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Archive/ExitAndClearSession.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="660">
@@ -553,13 +373,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="16" lean-forward="true" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterfaceStyle.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="508">
@@ -577,73 +390,10 @@
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/functionsForDisplay.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/FROMTO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/FROM.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="50" column="34" lean-forward="true" selection-start-line="50" selection-start-column="34" selection-end-line="50" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/TO.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/DeleteCookies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterfaceStyle.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="785">
-          <caret line="294" selection-start-line="294" selection-end-line="294" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ReceivedPostInterface.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="6136">
           <caret line="727" column="22" lean-forward="true" selection-start-line="727" selection-start-column="22" selection-end-line="727" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" column="114" selection-start-line="36" selection-start-column="114" selection-end-line="36" selection-end-column="114" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/GetDataFromDB.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="988">
-          <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StyleForPrint.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
         </state>
       </provider>
     </entry>
@@ -670,16 +420,220 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/ReceivedPost/ClearSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" lean-forward="true" selection-start-line="34" selection-end-line="35" selection-end-column="111" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/SelectControlling.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/GetDataFromDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="6" selection-start-line="97" selection-start-column="6" selection-end-line="97" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/ExitAndClearSession.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="18" selection-start-line="33" selection-start-column="18" selection-end-line="33" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StyleForPrint.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="74" lean-forward="true" selection-start-line="74" selection-end-line="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/LogPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="11" selection-end-line="3" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/FROM.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="5" lean-forward="true" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/FROMTO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="36" lean-forward="true" selection-start-line="22" selection-start-column="36" selection-end-line="22" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/TO.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="42" lean-forward="true" selection-start-line="2" selection-end-line="22" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterPostChecked.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="2" lean-forward="true" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterCustomers.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/CounterPostOnline.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/DeleteCookies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="12" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/ExitAndClearSessionAndCookie.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/StyleForCustomerMenu.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/MainAdminMenuInterface.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="630">
+          <caret line="42" column="43" selection-start-line="42" selection-start-column="43" selection-end-line="42" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForAdmin/MainAdminMenu/MainAdminMenuStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="975">
+          <caret line="65" column="30" selection-start-line="65" selection-start-column="30" selection-end-line="65" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/MainHTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2952">
+          <caret line="300" column="136" selection-start-line="300" selection-start-column="136" selection-end-line="300" selection-end-column="136" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/LogInRegisTer/AnimScript.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="590">
+          <caret line="303" column="67" selection-start-line="303" selection-start-column="67" selection-end-line="303" selection-end-column="67" />
+          <folding>
+            <element signature="n#!!block;n#FieldFST#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field4#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field6#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field7#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field8#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#CheckOnChars#0;n#!!block;n#Field9#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#Field10#0;n#!!block;n#Validation#0" />
+            <element signature="n#!!block;n#ClearFields#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/CustomerMenuPHP.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="73" column="48" selection-start-line="73" selection-start-column="48" selection-end-line="73" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterfaceStyle.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="693">
+          <caret line="313" column="17" selection-start-line="313" selection-start-column="17" selection-end-line="313" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/GetDataFromDB.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/SendMailCustomer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="298" lean-forward="true" selection-start-line="298" selection-end-line="298" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/StyleForSendMailCustomer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="380" column="17" selection-start-line="380" selection-start-column="17" selection-end-line="380" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/Statistic/StatisticsInterface.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1877">
-          <caret line="303" column="44" selection-start-line="303" selection-start-column="44" selection-end-line="303" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#1;n#div#0;n#div#2;n#main#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#8736#9875#0#HTML" />
-            <element signature="e#10518#10627#0#HTML" />
-            <element signature="e#11265#11364#0#HTML" />
-          </folding>
+        <state relative-caret-position="645">
+          <caret line="248" column="50" selection-start-line="248" selection-start-column="50" selection-end-line="248" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToBox.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="751">
+          <caret line="60" column="108" selection-start-line="60" selection-start-column="108" selection-end-line="60" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToCash.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="57" column="20" lean-forward="true" selection-start-line="57" selection-start-column="20" selection-end-line="58" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MainContent/MenuForCustomer/SendPost/CheckToEmail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="521">
+          <caret line="54" column="108" selection-start-line="54" selection-start-column="108" selection-end-line="54" selection-end-column="108" />
         </state>
       </provider>
     </entry>

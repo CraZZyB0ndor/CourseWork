@@ -26,7 +26,7 @@ function CheckEmail($connectMySQL) {
                 if ( strcasecmp(trim($_POST['Email_to_user']), trim($str)) === 0 ) {
 
 
-                    if ( strlen(trim($_POST['ThemeLetterPHP'])) > 2 || strlen(trim($_POST['MainContentLetterPHP'])) > 10 ) {
+                    if ( strlen(trim($_POST['ThemeLetterPHP'])) > 2 && strlen(trim($_POST['MainContentLetterPHP'])) > 10 ) {
 
                         //return "OK";
 
@@ -51,8 +51,8 @@ function CheckEmail($connectMySQL) {
 
                         $id_post = mysqli_fetch_array($mysqli_id_post);
 
-                        $query_insert_to_status_post = "INSERT INTO `Statuspost` (`ID-post`)
-                                                        VALUES ('$id_post[0]')";
+                        $query_insert_to_status_post = "INSERT INTO `Statuspost` (`ID-post`, `StatusOfPost`, `DateOfReceipt`)
+                                                        VALUES ('$id_post[0]', 'Доставлено', '$date_time')";
 
                         $query_insert_to_waybill = "INSERT INTO `Waybill` (`ID-post`, `ID-sender`, `ID-addressee`)
                                                     VALUES ('$id_post[0]', '$ID_user_from', '$ID_user_to')";

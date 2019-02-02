@@ -1,0 +1,143 @@
+* {
+
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+}
+
+header {
+
+    position: fixed;
+
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+
+    justify-content: space-between;
+
+    background-color: rgb(238, 188, 64);
+
+    width: 100%;
+    height: 70px;
+
+    border-bottom: solid black 2px;
+}
+
+header>div, header>div>a, header>div>a>p {
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    font-family: 'Russo One', sans-serif;
+    font-size: 20px;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+
+    text-align: center;
+
+    height: 100%;
+    width: 245px;
+}
+
+header>div {
+
+    border-right: solid 2px black;
+}
+
+header>div>a:hover {
+
+    background-color: #DBA728;
+}
+
+header>div:nth-child(2)>a {
+
+    background-color: #DBA728;
+}
+
+header>div>a>img {
+
+    width: 40px;
+    height: 40px;
+}
+
+header>div:nth-child(1), header>div:nth-child(1)>a, header>div:nth-child(1)>a>p {
+
+    width: 60px;
+}
+
+header>div:nth-child(5), header>div:nth-child(5)>a, header>div:nth-child(5)>a>p,
+header>div:nth-child(6), header>div:nth-child(6)>a, header>div:nth-child(6)>a>p,
+header>div:nth-child(7), header>div:nth-child(7)>a, header>div:nth-child(7)>a>p {
+
+    width: 100px;
+}
+
+header>div:nth-child(3), header>div:nth-child(3)>a, header>div:nth-child(3)>a>p {
+
+    width: 285px;
+}
+
+header>div:last-child {
+
+    border: none;
+    width: 150px;
+
+    font-size: 30px;
+
+    margin-left: auto;
+}
+
+#CounterOnlPost, #CounterPostChanged, #CounterUsers {
+
+    position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 25px;
+    height: 25px;
+
+    top: 10px;
+    left: 275px;
+
+    color: white;
+
+    background-color: black;
+    border-radius: 50px;
+}
+
+#CounterPostChanged {
+
+    top: 10px;
+    left: 560px;
+}
+
+#CounterUsers {
+
+    top: 10px;
+    left: 795px;
+}
+
+
+
+main {
+
+    background-color: red;
+
+    width: 100%;
+    height: 3000px;
+}
+

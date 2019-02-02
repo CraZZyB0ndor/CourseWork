@@ -378,6 +378,7 @@ button::-moz-focus-inner {
 #AfterSendLetter>div>p {
 
     margin-top: 10px;
+    font-size: 20px;
 }
 
 #AfterSendLetter>div>img {
